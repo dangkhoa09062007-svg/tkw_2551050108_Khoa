@@ -10,21 +10,21 @@
   --color-muted: #64748B;
   --color-surface: #ECFDF5;
   --color-line: #D1FAE5;
-  
+
   --font-display: "Plus Jakarta Sans", system-ui, sans-serif;
   --font-body: "Inter", system-ui, sans-serif;
-  
+
   --radius-card: 0.875rem;
   --radius-pill: 9999px;
 }
 
-/* Reusable Components cho Nhiệm vụ 4 */
+/* Các lớp tái sử dụng cho Nhiệm vụ 4 */
 .section {
   @apply mx-auto w-full max-w-6xl px-5 py-20 lg:py-28;
 }
 
 .btn {
-  @apply inline-flex items-center justify-center gap-2 rounded-pill px-5 py-2.5 text-sm font-semibold transition-colors;
+  @apply inline-flex items-center justify-center gap-2 rounded-pill px-5 py-2.5 text-sm font-semibold transition-colors cursor-pointer;
 }
 
 .btn-primary {

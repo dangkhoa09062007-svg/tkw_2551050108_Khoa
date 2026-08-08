@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bloom - Sustainable Solutions</title>
+  <link rel="stylesheet" href="../dist/output.css">
+</head>
+<body class="bg-white text-gray-800 font-sans antialiased">
+
+  <!-- Thẻ skip link đúng mẫu thầy -->
+  <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:p-3 focus:bg-white focus:text-emerald-800 focus:z-50">
+    Bỏ qua đến nội dung chính
+  </a>
+
+  <!-- Header & Nav đúng mẫu thầy -->
+  <header class="bg-white">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
+      <a href="#" class="inline-flex items-center gap-2 text-2xl font-bold text-gray-900">
+          <svg class="w-8 h-8 shrink-0" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="bloomLeaf" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#10B981" />
+                <stop offset="100%" stop-color="#047857" />
+              </linearGradient>
+            </defs>
+            <path d="M27 4C27 4 14 5.5 7.5 14C3 20 4.5 25 7 27C9.5 29 14.5 28 19 23.5C25 17.5 27 4 27 4Z" fill="url(#bloomLeaf)"/>
+            <path d="M7 27C12.5 21 18.5 14 27 4" stroke="white" stroke-width="2" stroke-linecap="round" opacity="0.9"/>
+          </svg>
+          <span class="tracking-tight text-emerald-950 font-extrabold">Bloom</span>
+      </a>
+      <nav aria-label="Điều hướng chính" class="hidden md:flex gap-6 text-sm font-medium">
+        <a href="#hero" class="text-emerald-800 font-semibold">Home</a>
+        <a href="#features" class="hover:text-emerald-700">Features</a>
+        <a href="#solutions" class="hover:text-emerald-700">Solutions</a>
+        <a href="#pricing" class="hover:text-emerald-700">Pricing</a>
+        <a href="#faq" class="hover:text-emerald-700">FAQ</a>
+      </nav>
+
+      <div class="flex gap-3 items-center text-sm">
+        <a href="#" class="font-medium hover:text-emerald-700">Log in</a>
+        <a href="#" class="bg-emerald-800 text-white px-4 py-2 rounded-full hover:bg-emerald-900 font-medium">Get started</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section aria-labelledby="hero-title" id="hero" class="max-w-6xl mx-auto px-4 py-12 grid md:grid-cols-2 gap-8 items-center">
+      <div>
+        <span class="inline-block bg-emerald-100 text-emerald-800 text-xs font-semibold px-3 py-1 rounded-full mb-4">
+          🌱 Tương lai bền vững
+        </span>
+        <h1 id="hero-title" class="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4 leading-tight">
+          Phát triển doanh nghiệp của bạn <span class="text-emerald-600">với giải pháp bền vững.</span>
+        </h1>
+        <p class="text-gray-600 mb-6">
+          Bloom giúp các công ty xây dựng một ngày mai tốt đẹp hơn thông qua công nghệ thân thiện với môi trường, các hoạt động có trách nhiệm và tác động có thể đo lường được.
+        </p>
+        <div class="flex gap-4 mb-8">
+          <a href="#solutions" class="bg-emerald-800 text-white px-6 py-3 rounded-full font-medium hover:bg-emerald-900">Khám phá giải pháp</a>
+          <button type="button" class="border border-emerald-800 text-emerald-800 px-6 py-3 rounded-full font-medium hover:bg-emerald-100 active:scale-95 transition-all duration-150 cursor-pointer focus:outline-none focus:ring-2 focus:ring-emerald-800 focus:ring-offset-2" onclick="playVideo()">
+            Xem video ngay
+          </button>
+        </div>
+        
+        <ul class="grid grid-cols-3 gap-3">
+          <li class="bg-white p-3 rounded-xl border border-emerald-100 shadow-sm text-center">
+            <strong class="block text-xl text-gray-900">120+</strong>
+            <span class="text-xs text-gray-500">Eco Projects</span>
+          </li>
+          <li class="bg-white p-3 rounded-xl border border-emerald-100 shadow-sm text-center">
+            <strong class="block text-xl text-gray-900">2.5K+</strong>
+            <span class="text-xs text-gray-500">Happy Clients</span>
+          </li>
+          <li class="bg-white p-3 rounded-xl border border-emerald-100 shadow-sm text-center">
+            <strong class="block text-xl text-gray-900">98%</strong>
+            <span class="text-xs text-gray-500">Positive Impact</span>
+          </li>
+        </ul>
+      </div>
+      <div class="flex justify-center items-center">
+        <img 
+          src="bloom-3d.png" 
+          alt="Mô phỏng 3D giải pháp năng lượng xanh Bloom" 
+          class="w-full h-auto max-h-[420px] object-contain rounded-2xl drop-shadow-md"
+        />
+      </div>
+    </section>
+    <div id="logos" class="py-10 bg-white">
+      <div class="max-w-4xl mx-auto px-4"></div>
+        <div class="flex flex-wrap items-center justify-center gap-8 md:gap-30 text-gray-500 font-bold text-xl">
+          <span class="text-xl font-bold text-gray-500 hover:text-gray-800 transition-colors">Google</span>
+          <span class="text-xl font-bold text-gray-500 hover:text-gray-800 transition-colors">Microsoft</span>
+          <span class="text-xl font-bold text-gray-500 hover:text-gray-800 transition-colors">Spotify</span>
+          <span class="text-xl font-bold text-gray-500 hover:text-gray-800 transition-colors">Mailchimp</span>
+          <span class="text-xl font-bold text-gray-500 hover:text-gray-800 transition-colors">Airbnb</span>
+          <span class="text-xl font-bold text-gray-500 hover:text-gray-800 transition-colors">UBER</span>
+        </div>
+      </div>
+    </section>
+    <section aria-labelledby="solutions-title" id="solutions" class="max-w-6xl mx-auto px-4 py-12">
+      <h2 id="solutions-title" class="text-2xl font-bold text-gray-900 mb-2">Giải pháp cho từng ngành nghề</h2>
+      <p class="text-gray-600 text-sm">Tối ưu hóa quy trình xanh cho sản xuất, bán lẻ và công nghệ.</p>
+    </section>
+
+    <section aria-labelledby="stats-title" id="stats" class="max-w-6xl mx-auto px-4 py-12 bg-emerald-50 rounded-2xl">
+      <h2 id="stats-title" class="text-2xl font-bold text-gray-900 mb-2">Tác động đo lường được</h2>
+      <p class="text-gray-600 text-sm">Các con số ấn tượng về môi trường do hệ thống cung cấp.</p>
+    </section>
+
+    <section aria-labelledby="testimonials-title" id="testimonials" class="max-w-6xl mx-auto px-4 py-12">
+      <h2 id="testimonials-title" class="text-2xl font-bold text-gray-900 mb-2">Khách hàng nói gì về Bloom</h2>
+      <p class="text-gray-600 text-sm">Đánh giá từ các doanh nghiệp đối tác hàng đầu.</p>
+    </section>
+
+    <section aria-labelledby="pricing-title" id="pricing" class="max-w-6xl mx-auto px-4 py-12">
+      <h2 id="pricing-title" class="text-2xl font-bold text-gray-900 mb-2">Bảng giá dịch vụ</h2>
+      <p class="text-gray-600 text-sm">Lựa chọn gói giải pháp phù hợp với quy mô doanh nghiệp.</p>
+    </section>
+
+    <section aria-labelledby="blog-title" id="blog" class="max-w-6xl mx-auto px-4 py-12">
+      <h2 id="blog-title" class="text-2xl font-bold text-gray-900 mb-2">Tin tức & Bài viết mới nhất</h2>
+      <p class="text-gray-600 text-sm">Cập nhật xu hướng chuyển đổi xanh và kiến thức ESG.</p>
+    </section>
+
+    <section aria-labelledby="faq-title" id="faq" class="max-w-6xl mx-auto px-4 py-12 bg-emerald-50 rounded-2xl">
+      <h2 id="faq-title" class="text-2xl font-bold text-gray-900 mb-2">Câu hỏi thường gặp</h2>
+      <p class="text-gray-600 text-sm">Giải đáp thắc mắc phổ biến của doanh nghiệp.</p>
+    </section>
+
+    <section aria-labelledby="cta-title" id="cta" class="max-w-6xl mx-auto px-4 py-12 text-center bg-emerald-800 text-white rounded-2xl my-8">
+      <h2 id="cta-title" class="text-3xl font-bold mb-3">Sẵn sàng chuyển đổi xanh?</h2>
+      <p class="text-emerald-100 text-sm mb-6">Bắt đầu dùng thử 30 ngày hoàn toàn miễn phí.</p>
+      <button type="button" class="bg-white text-emerald-800 px-6 py-2.5 rounded-full font-semibold hover:bg-emerald-50">Đăng ký ngay</button>
+    </section>
+
+  </main>
+
+  <footer class="border-t border-gray-100 py-8 text-center text-sm text-gray-500">
+    <p>© 2026 Bloom Sustainable Solutions. Tất cả quyền được bảo lưu.</p>
+  </footer>
+</body>
+</html>
