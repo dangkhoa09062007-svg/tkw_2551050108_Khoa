@@ -32,3 +32,10 @@ Figma: Taiwindcss
 16     rounded-2xl
 24     rounded-3xl
 9999px rounded-full //Bo tròn hoàn toàn
+
+-Trong Tw, lg: có nghĩa là "từ lg trở lên", không phải"ở lg"
+-Mặc định text-4xl, từ sm trở lên, từ lg trở lên
+-Hệ quả: class không có tiền tố chính là class dành cho điện thoại. Vì vậy quy trình luôn là 2 động tác:
+ 1) Hạ giá trị mặc định xuống kích cỡ điện thoại
+ 2) Nâng dần lên bằng sm: -> lg: -> xl: ....
+ 
