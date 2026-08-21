@@ -81,6 +81,19 @@ Form gồm **6 trường** với **5 kiểu dữ liệu** khác nhau (`text`, `t
 
 ---
 
+## ✅ 5. Yêu Cầu Hoàn Thành (Checklist Buổi 3)
+- [x] **Không có scroll ngang ở 360px trên cả ba trang** (`index.html`, `pricing.html`, `contact.html`).
+- [x] **Mọi class responsive viết theo hướng mobile-first** (không dùng `max-lg:`).
+- [x] **Bật class `dark` cho kết quả dùng được**: chữ đọc rõ, không có mảng trắng lòi ra.
+- [x] **Dark mode khai báo qua token**, không rải `dark:bg-gray-800` khắp HTML.
+- [x] **Có 8–10 component trong `@layer components`**, dùng ở ít nhất 2 trang (`.section`, `.eyebrow`, `.btn`, `.btn-primary`, `.btn-secondary`, `.btn-ghost`, `.card`, `.badge`, `.field-label`, `.field-input`, `.field-hint`, `.field-error`).
+- [x] **`pricing.html` và `contact.html` hoàn chỉnh**, tái sử dụng component.
+- [x] **Form đi được hết bằng Tab**, mỗi ô focus thấy rõ, có nhãn thật (không dùng placeholder thay nhãn).
+- [x] **Có URL công khai chạy được**, đã ghi vào README.
+- [x] **Ít nhất 4 commit, có tag `buoi-3`**.
+
+---
+
 ## 💡 6. Sẽ Làm Lại Nếu Có Thêm Thời Gian
 > **Nhận xét quan trọng về cấu trúc**:
 > Hiện tại, các phần **Header** (thanh điều hướng) và **Footer** đang phải sao chép thủ công ở cả 3 file (`index.html`, `pricing.html`, `contact.html`). Đây là một giới hạn cố hữu của **HTML tĩnh thuần túy**.
