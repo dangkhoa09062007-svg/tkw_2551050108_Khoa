@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="vi" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liên hệ tư vấn - Bloom ESG</title>
+    <link rel="stylesheet" href="../dist/output.css">
+  </head>
+  <body class="bg-surface text-ink antialiased selection:bg-brand-100 selection:text-brand-800 dark:bg-surface-dark dark:text-ink-invert">
+
+    <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:p-3 focus:bg-surface focus:text-brand-600 focus:z-50 focus:rounded-xl focus:shadow-lg">
+      Bỏ qua đến nội dung chính
+    </a>
+
+    <!-- HEADER -->
+    <header class="bg-surface/90 dark:bg-surface-dark/90 border-b border-line dark:border-line-invert sticky top-0 z-40 backdrop-blur-md transition-colors">
+      <div class="mx-auto w-full max-w-6xl px-5 py-4 flex items-center justify-between">
+        <a href="index.html" class="inline-flex items-center gap-2 text-2xl font-bold text-ink dark:text-ink-invert">
+          <svg class="w-8 h-8 shrink-0" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <defs>
+              <linearGradient id="bloomLeafContact" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#10B981" />
+                <stop offset="100%" stop-color="#0F5132" />
+              </linearGradient>
+            </defs>
+            <path d="M27 4C27 4 14 5.5 7.5 14C3 20 4.5 25 7 27C9.5 29 14.5 28 19 23.5C25 17.5 27 4 27 4Z" fill="url(#bloomLeafContact)"/>
+            <path d="M7 27C12.5 21 18.5 14 27 4" stroke="white" stroke-width="2" stroke-linecap="round" opacity="0.9"/>
+          </svg>
+          <span class="tracking-tight text-brand-700 dark:text-emerald-400 font-extrabold">Bloom</span>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav aria-label="Điều hướng chính" class="hidden lg:flex items-center gap-6 text-sm font-medium">
+          <a href="index.html" class="text-muted hover:text-brand-600 dark:text-muted-invert dark:hover:text-emerald-300 transition">Trang chủ</a>
+          <a href="index.html#features" class="text-muted hover:text-brand-600 dark:text-muted-invert dark:hover:text-emerald-300 transition">Tính năng</a>
+          <a href="index.html#solutions" class="text-muted hover:text-brand-600 dark:text-muted-invert dark:hover:text-emerald-300 transition">Giải pháp</a>
+          <a href="pricing.html" class="text-muted hover:text-brand-600 dark:text-muted-invert dark:hover:text-emerald-300 transition">Bảng giá</a>
+          <a href="contact.html" class="text-brand-600 dark:text-emerald-400 font-semibold">Liên hệ</a>
+          <a href="index.html#faq" class="text-muted hover:text-brand-600 dark:text-muted-invert dark:hover:text-emerald-300 transition">FAQ</a>
+        </nav>
+
+        <div class="flex items-center gap-2 sm:gap-3 text-sm">
+          <!-- Dark Mode Toggle Button -->
+          <button 
+            type="button" 
+            onclick="document.documentElement.classList.toggle('dark')" 
+            title="Chuyển chế độ sáng/tối" 
+            aria-label="Chuyển chế độ sáng tối" 
+            class="p-2 rounded-xl border border-line dark:border-line-invert text-muted dark:text-muted-invert hover:bg-surface-alt dark:hover:bg-surface-dark-alt transition cursor-pointer">
+            <svg class="w-4 h-4 hidden dark:block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+            </svg>
+            <svg class="w-4 h-4 block dark:hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+            </svg>
+          </button>
+
+          <a href="pricing.html" class="btn btn-primary text-xs sm:text-sm px-4 py-2">Bắt đầu ngay</a>
+
+          <!-- Mobile Hamburger Button -->
+          <button 
+            type="button" 
+            onclick="document.getElementById('mobileMenu').classList.toggle('hidden')" 
+            aria-label="Mở menu di động" 
+            class="lg:hidden p-2 rounded-xl border border-line dark:border-line-invert text-ink dark:text-ink-invert hover:bg-surface-alt dark:hover:bg-surface-dark-alt transition cursor-pointer">
+            <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Menu Dropdown -->
+      <div id="mobileMenu" class="hidden lg:hidden border-t border-line dark:border-line-invert bg-surface dark:bg-surface-dark px-5 py-4 space-y-3 text-sm">
+        <a href="index.html" class="block text-muted dark:text-muted-invert hover:text-brand-600 dark:hover:text-emerald-300 py-1">Trang chủ</a>
+        <a href="index.html#features" class="block text-muted dark:text-muted-invert hover:text-brand-600 dark:hover:text-emerald-300 py-1">Tính năng</a>
+        <a href="index.html#solutions" class="block text-muted dark:text-muted-invert hover:text-brand-600 dark:hover:text-emerald-300 py-1">Giải pháp</a>
+        <a href="pricing.html" class="block text-muted dark:text-muted-invert hover:text-brand-600 dark:hover:text-emerald-300 py-1">Bảng giá</a>
+        <a href="contact.html" class="block text-brand-600 dark:text-emerald-400 font-semibold py-1">Liên hệ</a>
+        <a href="index.html#faq" class="block text-muted dark:text-muted-invert hover:text-brand-600 dark:hover:text-emerald-300 py-1">FAQ</a>
+      </div>
+    </header>
+
+    <main id="main">
+      <!-- HERO CONTACT -->
+      <section class="section text-center pb-8">
+        <span class="eyebrow">
+          Kết nối cùng Bloom
+        </span>
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-ink dark:text-ink-invert tracking-tight leading-tight max-w-3xl mx-auto">
+          Bắt đầu hành trình chuyển đổi <span class="text-brand-600 dark:text-emerald-400">bền vững</span> ngay hôm nay
+        </h1>
+        <p class="text-muted dark:text-muted-invert mt-4 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
+          Đội ngũ kỹ thuật & chuyên gia ESG của chúng tôi luôn sẵn sàng lắng nghe và tư vấn giải pháp tối ưu nhất cho bạn.
+        </p>
+      </section>
+
+      <!-- FORM & INFO SECTION -->
+      <section class="mx-auto w-full max-w-6xl px-5 pb-20">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+          
+          <!-- FORM (Chuẩn tiếp cận Accessibility - Tiết 5) -->
+          <div class="lg:col-span-7 card p-6 sm:p-10 shadow-lg">
+            <h2 class="text-2xl font-bold text-ink dark:text-ink-invert mb-2">
+              Gửi yêu cầu tư vấn
+            </h2>
+            <p class="text-sm text-muted dark:text-muted-invert mb-8">
+              Điền các thông tin bên dưới, chúng tôi sẽ phản hồi trong vòng 2 giờ làm việc.
+            </p>
+
+            <form action="#" method="POST" class="space-y-6" novalidate>
+              <!-- Field 1: Text - Họ và tên -->
+              <div>
+                <label class="field-label" for="ho-ten">
+                  Họ và tên <span class="text-red-600" aria-hidden="true">*</span>
+                </label>
+                <input 
+                  class="field-input" 
+                  id="ho-ten" 
+                  name="hoTen" 
+                  type="text" 
+                  required 
+                  autocomplete="name"
+                  placeholder="Ví dụ: Lê Đăng Khoa"
+                  aria-describedby="ho-ten-hint ho-ten-error" 
+                />
+                <p class="field-hint" id="ho-ten-hint">
+                  Họ tên người đại diện liên hệ của doanh nghiệp.
+                </p>
+                <p class="field-error" id="ho-ten-error" role="alert"></p>
+              </div>
+
+              <!-- Field 2: Tel - Số điện thoại (Đúng 7 chi tiết theo mẫu thầy giáo) -->
+              <div>
+                <label class="field-label" for="dien-thoai">
+                  Số điện thoại <span class="text-red-600" aria-hidden="true">*</span>
+                </label>
+                <input 
+                  class="field-input" 
+                  id="dien-thoai" 
+                  name="dienThoai" 
+                  type="tel" 
+                  required
+                  pattern="0[0-9]{9}" 
+                  autocomplete="tel" 
+                  inputmode="numeric"
+                  placeholder="0912345678"
+                  aria-describedby="dien-thoai-hint dien-thoai-error" 
+                />
+                <p class="field-hint" id="dien-thoai-hint">
+                  Chúng tôi gọi qua số này, không nhắn tin quảng cáo.
+                </p>
+                <p class="field-error" id="dien-thoai-error" role="alert"></p>
+              </div>
+
+              <!-- Field 3: Email - Email doanh nghiệp -->
+              <div>
+                <label class="field-label" for="email">
+                  Email công việc <span class="text-red-600" aria-hidden="true">*</span>
+                </label>
+                <input 
+                  class="field-input" 
+                  id="email" 
+                  name="email" 
+                  type="email" 
+                  required 
+                  autocomplete="email"
+                  placeholder="ten@congty.com"
+                  aria-describedby="email-hint email-error" 
+                />
+                <p class="field-hint" id="email-hint">
+                  Bloom sẽ gửi tài liệu giải pháp và tài khoản demo vào email này.
+                </p>
+                <p class="field-error" id="email-error" role="alert"></p>
+              </div>
+
+              <!-- Field 4: Select - Quy mô doanh nghiệp -->
+              <div>
+                <label class="field-label" for="quy-mo">
+                  Quy mô doanh nghiệp <span class="text-red-600" aria-hidden="true">*</span>
+                </label>
+                <select 
+                  class="field-input cursor-pointer" 
+                  id="quy-mo" 
+                  name="quyMo" 
+                  required
+                  aria-describedby="quy-mo-hint quy-mo-error">
+                  <option value="" disabled selected>Chọn quy mô công ty</option>
+                  <option value="startup">Dưới 50 nhân sự (Startup / Doanh nghiệp nhỏ)</option>
+                  <option value="medium">50 – 200 nhân sự (Doanh nghiệp vừa)</option>
+                  <option value="large">200 – 1000 nhân sự (Doanh nghiệp lớn)</option>
+                  <option value="enterprise">Trên 1000 nhân sự (Tập đoàn đa chi nhánh)</option>
+                </select>
+                <p class="field-hint" id="quy-mo-hint">
+                  Giúp chúng tôi chuẩn bị mô hình tính toán phát thải phù hợp.
+                </p>
+                <p class="field-error" id="quy-mo-error" role="alert"></p>
+              </div>
+
+              <!-- Field 5: Textarea - Nhu cầu tư vấn -->
+              <div>
+                <label class="field-label" for="noi-dung">
+                  Nhu cầu tư vấn chi tiết <span class="text-red-600" aria-hidden="true">*</span>
+                </label>
+                <textarea 
+                  class="field-input resize-y" 
+                  id="noi-dung" 
+                  name="noiDung" 
+                  rows="4" 
+                  required
+                  placeholder="Mô tả các vấn đề về năng lượng, báo cáo ESG, hoặc hệ thống cần tích hợp..."
+                  aria-describedby="noi-dung-hint noi-dung-error"></textarea>
+                <p class="field-hint" id="noi-dung-hint">
+                  Càng chi tiết càng giúp đội ngũ kỹ sư đưa ra demo sát thực tế nhất.
+                </p>
+                <p class="field-error" id="noi-dung-error" role="alert"></p>
+              </div>
+
+              <!-- Field 6: Checkbox - Đồng ý điều khoản -->
+              <div class="pt-2">
+                <div class="flex items-start gap-3">
+                  <input 
+                    type="checkbox" 
+                    id="dong-y" 
+                    name="dongY" 
+                    required 
+                    class="mt-1 h-4 w-4 rounded border-line text-brand-600 focus:ring-brand-600 cursor-pointer dark:border-line-invert dark:bg-surface-dark"
+                    aria-describedby="dong-y-hint dong-y-error"
+                  />
+                  <label for="dong-y" class="text-xs sm:text-sm text-muted dark:text-muted-invert cursor-pointer">
+                    Tôi đồng ý nhận liên hệ từ chuyên viên tư vấn và chấp thuận <a href="#" class="text-brand-600 dark:text-emerald-400 underline font-semibold">Chính sách bảo mật</a> của Bloom. <span class="text-red-600" aria-hidden="true">*</span>
+                  </label>
+                </div>
+                <p class="field-error" id="dong-y-error" role="alert"></p>
+              </div>
+
+              <!-- Submit Button -->
+              <div class="pt-2">
+                <button type="submit" class="btn btn-primary w-full py-3.5 text-base shadow-md">
+                  Gửi thông tin đăng ký tư vấn →
+                </button>
+              </div>
+            </form>
+          </div>
+
+          <!-- INFO & CONTACT CARDS (RIGHT SIDE) -->
+          <div class="lg:col-span-5 space-y-6">
+            <!-- Contact details -->
+            <div class="card p-6 sm:p-8">
+              <h3 class="text-xl font-bold text-ink dark:text-ink-invert mb-6">
+                Thông tin liên hệ trực tiếp
+              </h3>
+              
+              <ul class="space-y-5 text-sm">
+                <li class="flex items-start gap-4">
+                  <span class="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-brand-50 text-brand-600 dark:bg-emerald-950 dark:text-emerald-400">
+                    <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                    </svg>
+                  </span>
+                  <div>
+                    <h4 class="font-bold text-ink dark:text-ink-invert">Địa chỉ trụ sở</h4>
+                    <p class="text-xs text-muted dark:text-muted-invert mt-1">
+                      Tầng 8, Tòa nhà Green Tower, Hóc Môn, Phường Đông Thạnh, TP. Hồ Chí Minh, Việt Nam
+                    </p>
+                  </div>
+                </li>
+
+                <li class="flex items-start gap-4">
+                  <span class="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-brand-50 text-brand-600 dark:bg-emerald-950 dark:text-emerald-400">
+                    <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+                    </svg>
+                  </span>
+                  <div>
+                    <h4 class="font-bold text-ink dark:text-ink-invert">Hotline tư vấn ESG</h4>
+                    <p class="text-xs text-muted dark:text-muted-invert mt-1 font-mono">
+                      +84 (028) 3822 8888 (Nhánh 1)
+                    </p>
+                  </div>
+                </li>
+
+                <li class="flex items-start gap-4">
+                  <span class="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-brand-50 text-brand-600 dark:bg-emerald-950 dark:text-emerald-400">
+                    <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                    </svg>
+                  </span>
+                  <div>
+                    <h4 class="font-bold text-ink dark:text-ink-invert">Hộp thư hỗ trợ</h4>
+                    <p class="text-xs text-muted dark:text-muted-invert mt-1">
+                      2551050108khoa@bloom.eco
+                    </p>
+                  </div>
+                </li>
+
+                <li class="flex items-start gap-4">
+                  <span class="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-brand-50 text-brand-600 dark:bg-emerald-950 dark:text-emerald-400">
+                    <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                    </svg>
+                  </span>
+                  <div>
+                    <h4 class="font-bold text-ink dark:text-ink-invert">Giờ làm việc</h4>
+                    <p class="text-xs text-muted dark:text-muted-invert mt-1">
+                      Thứ Hai – Thứ Sáu: 8:00 – 17:30 (Hỗ trợ khẩn cấp 24/7)
+                    </p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Cam kết bảo mật -->
+            <div class="card p-6 bg-surface-alt/60 dark:bg-surface-dark-alt/50 border border-line dark:border-line-invert">
+              <h4 class="font-bold text-sm text-ink dark:text-ink-invert flex items-center gap-2">
+                <span class="text-brand-600 dark:text-emerald-400">🔒</span>
+                Cam kết bảo mật thông tin
+              </h4>
+              <p class="text-xs text-muted dark:text-muted-invert mt-2 leading-relaxed">
+                Mọi dữ liệu tiêu thụ năng lượng và thông tin đăng ký của doanh nghiệp được mã hóa đạt chuẩn ISO/IEC 27001 và không chia sẻ cho bên thứ ba.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PHẦN: SAU KHI GỬI THÌ SAO? (What Happens Next) -->
+      <section aria-labelledby="process-title" class="section border-t border-line dark:border-line-invert">
+        <div class="text-center max-w-2xl mx-auto mb-14">
+          <span class="eyebrow">Quy trình xử lý</span>
+          <h2 id="process-title" class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-ink dark:text-ink-invert">
+            Sau khi gửi thông tin thì sao?
+          </h2>
+          <p class="text-muted dark:text-muted-invert text-sm mt-3">
+            Quy trình tiếp nhận và hỗ trợ chuẩn hóa trong 4 bước đơn giản.
+          </p>
+        </div>
+
+        <ol class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <li class="card">
+            <span class="text-xs font-bold text-brand-600 dark:text-emerald-400 bg-brand-50 dark:bg-emerald-950 px-2.5 py-1 rounded-full">
+              Bước 1
+            </span>
+            <h3 class="text-lg font-bold text-ink dark:text-ink-invert mt-4">
+              Xác nhận tức thì
+            </h3>
+            <p class="text-xs text-muted dark:text-muted-invert mt-2 leading-relaxed">
+              Hệ thống gửi email xác nhận kèm tài liệu giới thiệu giải pháp tổng quan trong vòng 5 phút.
+            </p>
+          </li>
+
+          <li class="card">
+            <span class="text-xs font-bold text-brand-600 dark:text-emerald-400 bg-brand-50 dark:bg-emerald-950 px-2.5 py-1 rounded-full">
+              Bước 2
+            </span>
+            <h3 class="text-lg font-bold text-ink dark:text-ink-invert mt-4">
+              Chuyên viên liên hệ
+            </h3>
+            <p class="text-xs text-muted dark:text-muted-invert mt-2 leading-relaxed">
+              Chuyên gia giải pháp ESG liên hệ qua điện thoại hoặc email để làm rõ nhu cầu cụ thể của doanh nghiệp.
+            </p>
+          </li>
+
+          <li class="card">
+            <span class="text-xs font-bold text-brand-600 dark:text-emerald-400 bg-brand-50 dark:bg-emerald-950 px-2.5 py-1 rounded-full">
+              Bước 3
+            </span>
+            <h3 class="text-lg font-bold text-ink dark:text-ink-invert mt-4">
+              Demo hệ thống 1:1
+            </h3>
+            <p class="text-xs text-muted dark:text-muted-invert mt-2 leading-relaxed">
+              Buổi thuyết trình trực tuyến hoặc trực tiếp với dữ liệu mô phỏng đúng ngành nghề của bạn.
+            </p>
+          </li>
+
+          <li class="card">
+            <span class="text-xs font-bold text-brand-600 dark:text-emerald-400 bg-brand-50 dark:bg-emerald-950 px-2.5 py-1 rounded-full">
+              Bước 4
+            </span>
+            <h3 class="text-lg font-bold text-ink dark:text-ink-invert mt-4">
+              Triển khai thử nghiệm
+            </h3>
+            <p class="text-xs text-muted dark:text-muted-invert mt-2 leading-relaxed">
+              Kích hoạt tài khoản dùng thử 30 ngày cùng sự đồng hành sát sao từ đội ngũ kỹ thuật.
+            </p>
+          </li>
+        </ol>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="border-t border-line dark:border-line-invert bg-surface-alt/70 dark:bg-surface-dark-alt/50 py-16 text-sm text-muted dark:text-muted-invert">
+      <div class="mx-auto w-full max-w-6xl px-5 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+        <div>
+          <a href="index.html" class="inline-flex items-center gap-2 text-2xl font-bold text-ink dark:text-ink-invert mb-4">
+            <span class="tracking-tight text-brand-700 dark:text-emerald-400 font-extrabold">Bloom</span>
+          </a>
+          <p class="text-xs text-muted dark:text-muted-invert leading-relaxed">
+            Giải pháp công nghệ hỗ trợ doanh nghiệp tối ưu hóa tiêu thụ năng lượng và xây dựng tương lai phát triển bền vững.
+          </p>
+        </div>
+
+        <nav aria-labelledby="footer-product-heading">
+          <h3 id="footer-product-heading" class="font-bold text-ink dark:text-ink-invert mb-4 text-xs uppercase tracking-wider">
+            Sản phẩm
+          </h3>
+          <ul class="space-y-2.5 text-xs">
+            <li><a href="index.html#features" class="hover:text-brand-600 dark:hover:text-emerald-300 transition">Tính năng chính</a></li>
+            <li><a href="index.html#solutions" class="hover:text-brand-600 dark:hover:text-emerald-300 transition">Giải pháp ngành</a></li>
+            <li><a href="pricing.html" class="hover:text-brand-600 dark:hover:text-emerald-300 transition">Bảng giá</a></li>
+            <li><a href="index.html#blog" class="hover:text-brand-600 dark:hover:text-emerald-300 transition">Tin tức</a></li>
+          </ul>
+        </nav>
+
+        <nav aria-labelledby="footer-support-heading">
+          <h3 id="footer-support-heading" class="font-bold text-ink dark:text-ink-invert mb-4 text-xs uppercase tracking-wider">
+            Hỗ trợ
+          </h3>
+          <ul class="space-y-2.5 text-xs">
+            <li><a href="index.html#faq" class="hover:text-brand-600 dark:hover:text-emerald-300 transition">Trung tâm trợ giúp</a></li>
+            <li><a href="index.html#faq" class="hover:text-brand-600 dark:hover:text-emerald-300 transition">Tài liệu API</a></li>
+            <li><a href="index.html#features" class="hover:text-brand-600 dark:hover:text-emerald-300 transition">Cộng đồng ESG</a></li>
+            <li><a href="contact.html" class="hover:text-brand-600 dark:hover:text-emerald-300 transition">Liên hệ hỗ trợ</a></li>
+          </ul>
+        </nav>
+
+        <nav aria-labelledby="footer-contact-heading">
+          <h3 id="footer-contact-heading" class="font-bold text-ink dark:text-ink-invert mb-4 text-xs uppercase tracking-wider">
+            Trụ sở chính
+          </h3>
+          <address class="not-italic text-xs text-muted dark:text-muted-invert space-y-2">
+            <p>Tầng 8, Tòa nhà Green Tower</p>
+            <p>Hóc Môn, Phường Đông Thạnh, TP. Hồ Chí Minh, Việt Nam</p>
+            <p>Email: 2551050108khoa@bloom.eco</p>
+          </address>
+        </nav>
+      </div>
+
+      <div class="mx-auto w-full max-w-6xl px-5 mt-12 pt-6 border-t border-line dark:border-line-invert text-center text-xs text-muted dark:text-muted-invert">
+        <p>© 2026 Bloom Sustainable Solutions. Tất cả quyền được bảo lưu.</p>
+      </div>
+    </footer>
+  </body>
+</html>

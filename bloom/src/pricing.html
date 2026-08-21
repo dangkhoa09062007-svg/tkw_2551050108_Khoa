@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="vi" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bảng giá dịch vụ - Bloom ESG</title>
+    <link rel="stylesheet" href="../dist/output.css">
+  </head>
+  <body class="bg-surface text-ink antialiased selection:bg-brand-100 selection:text-brand-800 dark:bg-surface-dark dark:text-ink-invert">
+
+    <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:p-3 focus:bg-surface focus:text-brand-600 focus:z-50 focus:rounded-xl focus:shadow-lg">
+      Bỏ qua đến nội dung chính
+    </a>
+
+    <!-- HEADER -->
+    <header class="bg-surface/90 dark:bg-surface-dark/90 border-b border-line dark:border-line-invert sticky top-0 z-40 backdrop-blur-md transition-colors">
+      <div class="mx-auto w-full max-w-6xl px-5 py-4 flex items-center justify-between">
+        <a href="index.html" class="inline-flex items-center gap-2 text-2xl font-bold text-ink dark:text-ink-invert">
+          <svg class="w-8 h-8 shrink-0" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <defs>
+              <linearGradient id="bloomLeafPricing" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#10B981" />
+                <stop offset="100%" stop-color="#0F5132" />
+              </linearGradient>
+            </defs>
+            <path d="M27 4C27 4 14 5.5 7.5 14C3 20 4.5 25 7 27C9.5 29 14.5 28 19 23.5C25 17.5 27 4 27 4Z" fill="url(#bloomLeafPricing)"/>
+            <path d="M7 27C12.5 21 18.5 14 27 4" stroke="white" stroke-width="2" stroke-linecap="round" opacity="0.9"/>
+          </svg>
+          <span class="tracking-tight text-brand-700 dark:text-emerald-400 font-extrabold">Bloom</span>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav aria-label="Điều hướng chính" class="hidden lg:flex items-center gap-6 text-sm font-medium">
+          <a href="index.html" class="text-muted hover:text-brand-600 dark:text-muted-invert dark:hover:text-emerald-300 transition">Trang chủ</a>
+          <a href="index.html#features" class="text-muted hover:text-brand-600 dark:text-muted-invert dark:hover:text-emerald-300 transition">Tính năng</a>
+          <a href="index.html#solutions" class="text-muted hover:text-brand-600 dark:text-muted-invert dark:hover:text-emerald-300 transition">Giải pháp</a>
+          <a href="pricing.html" class="text-brand-600 dark:text-emerald-400 font-semibold">Bảng giá</a>
+          <a href="contact.html" class="text-muted hover:text-brand-600 dark:text-muted-invert dark:hover:text-emerald-300 transition">Liên hệ</a>
+          <a href="index.html#faq" class="text-muted hover:text-brand-600 dark:text-muted-invert dark:hover:text-emerald-300 transition">FAQ</a>
+        </nav>
+
+        <div class="flex items-center gap-2 sm:gap-3 text-sm">
+          <!-- Dark Mode Toggle Button -->
+          <button 
+            type="button" 
+            onclick="document.documentElement.classList.toggle('dark')" 
+            title="Chuyển chế độ sáng/tối" 
+            aria-label="Chuyển chế độ sáng tối" 
+            class="p-2 rounded-xl border border-line dark:border-line-invert text-muted dark:text-muted-invert hover:bg-surface-alt dark:hover:bg-surface-dark-alt transition cursor-pointer">
+            <svg class="w-4 h-4 hidden dark:block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+            </svg>
+            <svg class="w-4 h-4 block dark:hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+            </svg>
+          </button>
+
+          <a href="contact.html" class="hidden sm:inline-flex btn-ghost text-xs sm:text-sm px-3 py-2">Đăng nhập</a>
+          <a href="contact.html" class="btn btn-primary text-xs sm:text-sm px-4 py-2">Tư vấn ngay</a>
+
+          <!-- Mobile Hamburger Button -->
+          <button 
+            type="button" 
+            onclick="document.getElementById('mobileMenu').classList.toggle('hidden')" 
+            aria-label="Mở menu di động" 
+            class="lg:hidden p-2 rounded-xl border border-line dark:border-line-invert text-ink dark:text-ink-invert hover:bg-surface-alt dark:hover:bg-surface-dark-alt transition cursor-pointer">
+            <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Menu Dropdown -->
+      <div id="mobileMenu" class="hidden lg:hidden border-t border-line dark:border-line-invert bg-surface dark:bg-surface-dark px-5 py-4 space-y-3 text-sm">
+        <a href="index.html" class="block text-muted dark:text-muted-invert hover:text-brand-600 dark:hover:text-emerald-300 py-1">Trang chủ</a>
+        <a href="index.html#features" class="block text-muted dark:text-muted-invert hover:text-brand-600 dark:hover:text-emerald-300 py-1">Tính năng</a>
+        <a href="index.html#solutions" class="block text-muted dark:text-muted-invert hover:text-brand-600 dark:hover:text-emerald-300 py-1">Giải pháp</a>
+        <a href="pricing.html" class="block text-brand-600 dark:text-emerald-400 font-semibold py-1">Bảng giá</a>
+        <a href="contact.html" class="block text-muted dark:text-muted-invert hover:text-brand-600 dark:hover:text-emerald-300 py-1">Liên hệ</a>
+        <a href="index.html#faq" class="block text-muted dark:text-muted-invert hover:text-brand-600 dark:hover:text-emerald-300 py-1">FAQ</a>
+      </div>
+    </header>
+
+    <main id="main">
+      <!-- HERO PRICING -->
+      <section class="section text-center pb-10">
+        <span class="eyebrow">
+          Bảng giá linh hoạt
+        </span>
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-ink dark:text-ink-invert tracking-tight leading-tight max-w-3xl mx-auto">
+          Đầu tư hiệu quả cho mục tiêu <span class="text-brand-600 dark:text-emerald-400">Net-Zero</span>
+        </h1>
+        <p class="text-muted dark:text-muted-invert mt-4 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
+          Không phí ẩn, không cam kết phức tạp. Dùng thử miễn phí 30 ngày cho tất cả các gói dịch vụ.
+        </p>
+      </section>
+
+      <!-- 3 PRICING CARDS -->
+      <section class="mx-auto w-full max-w-6xl px-5 pb-16">
+        <ul class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
+          <!-- GÓI CƠ BẢN -->
+          <li class="card flex flex-col p-8">
+            <h2 class="text-2xl font-bold text-ink dark:text-ink-invert">Cơ bản</h2>
+            <p class="text-xs text-muted dark:text-muted-invert mt-1">Dành cho startup & doanh nghiệp nhỏ mới bắt đầu</p>
+            
+            <div class="my-6">
+              <span class="text-4xl font-extrabold text-ink dark:text-ink-invert">100.000 VND</span>
+              <span class="text-muted dark:text-muted-invert text-sm">/tháng</span>
+            </div>
+
+            <ul class="space-y-3.5 text-sm text-muted dark:text-muted-invert mb-8">
+              <li class="flex items-center gap-2">
+                <span class="text-brand-600 dark:text-emerald-400 font-bold">✓</span>
+                <span>Giám sát 1 điểm vận hành cơ bản</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="text-brand-600 dark:text-emerald-400 font-bold">✓</span>
+                <span>Báo cáo điện nước hàng tháng</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="text-brand-600 dark:text-emerald-400 font-bold">✓</span>
+                <span>Xuất file dữ liệu PDF / Excel</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="text-brand-600 dark:text-emerald-400 font-bold">✓</span>
+                <span>Hỗ trợ kỹ thuật qua Email</span>
+              </li>
+            </ul>
+
+            <a href="contact.html" class="mt-auto block text-center btn-secondary py-3 px-6 rounded-pill">
+              Chọn gói Cơ bản
+            </a>
+          </li>
+
+          <!-- GÓI CHUYÊN NGHIỆP -->
+          <li class="card relative flex flex-col p-8 ring-2 ring-brand-600 dark:ring-emerald-500 shadow-xl">
+            <span class="absolute -top-3.5 left-6 bg-brand-600 dark:bg-emerald-600 text-white text-xs px-3.5 py-1 rounded-full font-semibold">
+              Được tin dùng nhiều nhất
+            </span>
+            <h2 class="text-2xl font-bold text-ink dark:text-ink-invert">Chuyên nghiệp</h2>
+            <p class="text-xs text-muted dark:text-muted-invert mt-1">Dành cho doanh nghiệp vừa và đang tăng trưởng</p>
+
+            <div class="my-6">
+              <span class="text-4xl font-extrabold text-ink dark:text-ink-invert">250.000 VND</span>
+              <span class="text-muted dark:text-muted-invert text-sm">/tháng</span>
+            </div>
+
+            <ul class="space-y-3.5 text-sm text-muted dark:text-muted-invert mb-8">
+              <li class="flex items-center gap-2">
+                <span class="text-brand-600 dark:text-emerald-400 font-bold">✓</span>
+                <span>Giám sát đến 10 điểm vận hành</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="text-brand-600 dark:text-emerald-400 font-bold">✓</span>
+                <span>Báo cáo ESG chuẩn quốc tế (GRI/IFRS)</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="text-brand-600 dark:text-emerald-400 font-bold">✓</span>
+                <span>AI phân tích & đề xuất tiết kiệm chi phí</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="text-brand-600 dark:text-emerald-400 font-bold">✓</span>
+                <span>Kết nối hệ thống IoT & Smart Meter</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="text-brand-600 dark:text-emerald-400 font-bold">✓</span>
+                <span>Hỗ trợ ưu tiên qua Hotline 24/7</span>
+              </li>
+            </ul>
+
+            <a href="contact.html" class="mt-auto block text-center btn-primary py-3 px-6 rounded-pill">
+              Dùng thử miễn phí 30 ngày
+            </a>
+          </li>
+
+          <!-- GÓI DOANH NGHIỆP -->
+          <li class="card flex flex-col p-8">
+            <h2 class="text-2xl font-bold text-ink dark:text-ink-invert">Doanh nghiệp</h2>
+            <p class="text-xs text-muted dark:text-muted-invert mt-1">Dành cho tập đoàn & chuỗi chi nhánh lớn</p>
+
+            <div class="my-6">
+              <span class="text-4xl font-extrabold text-ink dark:text-ink-invert">500.000 VND</span>
+              <span class="text-muted dark:text-muted-invert text-sm">/tháng</span>
+            </div>
+
+            <ul class="space-y-3.5 text-sm text-muted dark:text-muted-invert mb-8">
+              <li class="flex items-center gap-2">
+                <span class="text-brand-600 dark:text-emerald-400 font-bold">✓</span>
+                <span>Không giới hạn số điểm giám sát</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="text-brand-600 dark:text-emerald-400 font-bold">✓</span>
+                <span>Tích hợp API ERP, SAP, Oracle tùy biến</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="text-brand-600 dark:text-emerald-400 font-bold">✓</span>
+                <span>Chuyên gia tư vấn chiến lược Net-Zero 1:1</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="text-brand-600 dark:text-emerald-400 font-bold">✓</span>
+                <span>Cam kết chất lượng SLA 99.9%</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="text-brand-600 dark:text-emerald-400 font-bold">✓</span>
+                <span>Máy chủ lưu trữ dữ liệu chuyên biệt</span>
+              </li>
+            </ul>
+
+            <a href="contact.html" class="mt-auto block text-center btn-secondary py-3 px-6 rounded-pill">
+              Liên hệ đội ngũ tư vấn
+            </a>
+          </li>
+        </ul>
+      </section>
+
+      <!-- BẢNG SO SÁNH TÍNH NĂNG (Chỗ vỡ 3: Cuộn ngang trên mobile với overflow-x-auto + min-w-[720px]) -->
+      <section aria-labelledby="comparison-title" class="section pt-4">
+        <div class="text-center max-w-2xl mx-auto mb-10">
+          <span class="eyebrow">So sánh chi tiết</span>
+          <h2 id="comparison-title" class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-ink dark:text-ink-invert">
+            So sánh chi tiết các gói tính năng
+          </h2>
+          <p class="text-muted dark:text-muted-invert text-sm mt-3">
+            Tất cả những gì bạn cần để đưa ra quyết định phù hợp nhất.
+          </p>
+          <p class="mt-2 text-sm text-muted dark:text-muted-invert lg:hidden">
+            👉 Vuốt ngang để xem hết bảng.
+          </p>
+        </div>
+
+        <!-- Bọc overflow-x-auto và đặt min-w-[720px] cho bảng -->
+        <div class="card p-0 overflow-hidden">
+          <div class="overflow-x-auto">
+            <table class="w-full min-w-[720px] text-left border-collapse text-sm">
+              <thead>
+                <tr class="border-b border-line dark:border-line-invert bg-surface-alt/70 dark:bg-surface-dark/60">
+                  <th scope="col" class="p-4 sm:p-5 font-bold text-ink dark:text-ink-invert w-1/3">Tính năng & Tiêu chí</th>
+                  <th scope="col" class="p-4 sm:p-5 font-bold text-ink dark:text-ink-invert text-center">Cơ bản</th>
+                  <th scope="col" class="p-4 sm:p-5 font-bold text-brand-600 dark:text-emerald-400 text-center bg-brand-50/50 dark:bg-emerald-950/40">Chuyên nghiệp</th>
+                  <th scope="col" class="p-4 sm:p-5 font-bold text-ink dark:text-ink-invert text-center">Doanh nghiệp</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-line dark:divide-line-invert">
+                <!-- Row 1 -->
+                <tr class="hover:bg-surface-alt/40 dark:hover:bg-surface-dark-alt transition">
+                  <td class="p-4 sm:p-5 font-medium text-ink dark:text-ink-invert">Số điểm đo lường / Nhà máy</td>
+                  <td class="p-4 sm:p-5 text-center text-muted dark:text-muted-invert">1 điểm</td>
+                  <td class="p-4 sm:p-5 text-center font-semibold text-brand-600 dark:text-emerald-400 bg-brand-50/30 dark:bg-emerald-950/20">Tối đa 10 điểm</td>
+                  <td class="p-4 sm:p-5 text-center text-ink dark:text-ink-invert font-semibold">Không giới hạn</td>
+                </tr>
+
+                <!-- Row 2 -->
+                <tr class="hover:bg-surface-alt/40 dark:hover:bg-surface-dark-alt transition">
+                  <td class="p-4 sm:p-5 font-medium text-ink dark:text-ink-invert">Tần suất cập nhật dữ liệu</td>
+                  <td class="p-4 sm:p-5 text-center text-muted dark:text-muted-invert">Hàng ngày</td>
+                  <td class="p-4 sm:p-5 text-center font-semibold text-brand-600 dark:text-emerald-400 bg-brand-50/30 dark:bg-emerald-950/20">Thời gian thực (15p)</td>
+                  <td class="p-4 sm:p-5 text-center text-ink dark:text-ink-invert font-semibold">Thời gian thực (Tức thì)</td>
+                </tr>
+
+                <!-- Row 3 -->
+                <tr class="hover:bg-surface-alt/40 dark:hover:bg-surface-dark-alt transition">
+                  <td class="p-4 sm:p-5 font-medium text-ink dark:text-ink-invert">Báo cáo ESG chuẩn GRI / GHG Protocol</td>
+                  <td class="p-4 sm:p-5 text-center text-muted dark:text-muted-invert">—</td>
+                  <td class="p-4 sm:p-5 text-center font-semibold text-brand-600 dark:text-emerald-400 bg-brand-50/30 dark:bg-emerald-950/20">✓ Có</td>
+                  <td class="p-4 sm:p-5 text-center text-ink dark:text-ink-invert font-semibold">✓ Đầy đủ mọi chuẩn</td>
+                </tr>
+
+                <!-- Row 4 -->
+                <tr class="hover:bg-surface-alt/40 dark:hover:bg-surface-dark-alt transition">
+                  <td class="p-4 sm:p-5 font-medium text-ink dark:text-ink-invert">Trợ lý AI phân tích tối ưu hóa</td>
+                  <td class="p-4 sm:p-5 text-center text-muted dark:text-muted-invert">Gợi ý cơ bản</td>
+                  <td class="p-4 sm:p-5 text-center font-semibold text-brand-600 dark:text-emerald-400 bg-brand-50/30 dark:bg-emerald-950/20">AI chuyên sâu tự động</td>
+                  <td class="p-4 sm:p-5 text-center text-ink dark:text-ink-invert font-semibold">Mô hình AI riêng biệt</td>
+                </tr>
+
+                <!-- Row 5 -->
+                <tr class="hover:bg-surface-alt/40 dark:hover:bg-surface-dark-alt transition">
+                  <td class="p-4 sm:p-5 font-medium text-ink dark:text-ink-invert">Tích hợp API ERP / SAP / CRM</td>
+                  <td class="p-4 sm:p-5 text-center text-muted dark:text-muted-invert">—</td>
+                  <td class="p-4 sm:p-5 text-center font-semibold text-brand-600 dark:text-emerald-400 bg-brand-50/30 dark:bg-emerald-950/20">API REST tiêu chuẩn</td>
+                  <td class="p-4 sm:p-5 text-center text-ink dark:text-ink-invert font-semibold">API tùy biến & Webhook</td>
+                </tr>
+
+                <!-- Row 6 -->
+                <tr class="hover:bg-surface-alt/40 dark:hover:bg-surface-dark-alt transition">
+                  <td class="p-4 sm:p-5 font-medium text-ink dark:text-ink-invert">Cam kết chất lượng SLA</td>
+                  <td class="p-4 sm:p-5 text-center text-muted dark:text-muted-invert">99.0%</td>
+                  <td class="p-4 sm:p-5 text-center font-semibold text-brand-600 dark:text-emerald-400 bg-brand-50/30 dark:bg-emerald-950/20">99.5%</td>
+                  <td class="p-4 sm:p-5 text-center text-ink dark:text-ink-invert font-semibold">99.9%</td>
+                </tr>
+
+                <!-- Row 7 -->
+                <tr class="hover:bg-surface-alt/40 dark:hover:bg-surface-dark-alt transition">
+                  <td class="p-4 sm:p-5 font-medium text-ink dark:text-ink-invert">Kênh hỗ trợ kỹ thuật</td>
+                  <td class="p-4 sm:p-5 text-center text-muted dark:text-muted-invert">Email (24h)</td>
+                  <td class="p-4 sm:p-5 text-center font-semibold text-brand-600 dark:text-emerald-400 bg-brand-50/30 dark:bg-emerald-950/20">Hotline 24/7 + Chat</td>
+                  <td class="p-4 sm:p-5 text-center text-ink dark:text-ink-invert font-semibold">Chuyên gia riêng 1:1</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ THANH TOÁN -->
+      <section aria-labelledby="pricing-faq-title" class="section">
+        <div class="text-center max-w-2xl mx-auto mb-10">
+          <span class="eyebrow">Thắc mắc</span>
+          <h2 id="pricing-faq-title" class="text-2xl sm:text-3xl lg:text-4xl font-bold text-ink dark:text-ink-invert">
+            Câu hỏi về thanh toán & gói dịch vụ
+          </h2>
+        </div>
+
+        <div class="max-w-3xl mx-auto space-y-4">
+          <details class="card group cursor-pointer">
+            <summary class="font-bold text-ink dark:text-ink-invert list-none flex justify-between items-center gap-4">
+              <span>Tôi có cần nhập thẻ tín dụng khi đăng ký dùng thử không?</span>
+              <span class="text-brand-600 dark:text-emerald-400 group-open:rotate-180 transition shrink-0">▼</span>
+            </summary>
+            <p class="text-sm text-muted dark:text-muted-invert mt-3 leading-relaxed">
+              Không cần! Bạn hoàn toàn có thể trải nghiệm toàn bộ tính năng của gói Chuyên nghiệp trong 30 ngày mà không cần cung cấp bất kỳ thông tin thẻ thanh toán nào.
+            </p>
+          </details>
+
+          <details class="card group cursor-pointer">
+            <summary class="font-bold text-ink dark:text-ink-invert list-none flex justify-between items-center gap-4">
+              <span>Doanh nghiệp có được hoàn tiền nếu không hài lòng?</span>
+              <span class="text-brand-600 dark:text-emerald-400 group-open:rotate-180 transition shrink-0">▼</span>
+            </summary>
+            <p class="text-sm text-muted dark:text-muted-invert mt-3 leading-relaxed">
+              Có. Bloom cam kết chính sách hoàn tiền 100% trong vòng 14 ngày đầu tiên kể từ ngày bắt đầu thanh toán nếu dịch vụ không đáp ứng được yêu cầu của bạn.
+            </p>
+          </details>
+
+          <details class="card group cursor-pointer">
+            <summary class="font-bold text-ink dark:text-ink-invert list-none flex justify-between items-center gap-4">
+              <span>Phương thức thanh toán nào được chấp nhận?</span>
+              <span class="text-brand-600 dark:text-emerald-400 group-open:rotate-180 transition shrink-0">▼</span>
+            </summary>
+            <p class="text-sm text-muted dark:text-muted-invert mt-3 leading-relaxed">
+              Chúng tôi hỗ trợ chuyển khoản ngân hàng (có xuất hóa đơn VAT điện tử), thẻ tín dụng/ghi nợ quốc tế (Visa, MasterCard), và cổng thanh toán nội địa.
+            </p>
+          </details>
+        </div>
+      </section>
+
+      <!-- CTA -->
+      <section class="section pt-0">
+        <div class="bg-brand-600 text-white rounded-3xl p-8 sm:p-12 text-center shadow-xl">
+          <h2 class="text-2xl sm:text-3xl md:text-4xl font-extrabold mb-4">
+            Cần giải pháp thiết kế riêng cho tổ chức của bạn?
+          </h2>
+          <p class="text-brand-50/90 max-w-xl mx-auto text-sm sm:text-base mb-8">
+            Đội ngũ tư vấn ESG của chúng tôi luôn sẵn sàng lắng nghe và xây dựng lộ trình phù hợp với ngân sách của bạn.
+          </p>
+          <a href="contact.html" class="btn bg-white text-brand-700 hover:bg-brand-50 px-8 py-3.5 font-bold shadow-md">
+            Liên hệ tư vấn ngay
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="border-t border-line dark:border-line-invert bg-surface-alt/70 dark:bg-surface-dark-alt/50 py-16 text-sm text-muted dark:text-muted-invert">
+      <div class="mx-auto w-full max-w-6xl px-5 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+        <div>
+          <a href="index.html" class="inline-flex items-center gap-2 text-2xl font-bold text-ink dark:text-ink-invert mb-4">
+            <span class="tracking-tight text-brand-700 dark:text-emerald-400 font-extrabold">Bloom</span>
+          </a>
+          <p class="text-xs text-muted dark:text-muted-invert leading-relaxed">
+            Giải pháp công nghệ hỗ trợ doanh nghiệp tối ưu hóa tiêu thụ năng lượng và xây dựng tương lai phát triển bền vững.
+          </p>
+        </div>
+
+        <nav aria-labelledby="footer-product-heading">
+          <h3 id="footer-product-heading" class="font-bold text-ink dark:text-ink-invert mb-4 text-xs uppercase tracking-wider">
+            Sản phẩm
+          </h3>
+          <ul class="space-y-2.5 text-xs">
+            <li><a href="index.html#features" class="hover:text-brand-600 dark:hover:text-emerald-300 transition">Tính năng chính</a></li>
+            <li><a href="index.html#solutions" class="hover:text-brand-600 dark:hover:text-emerald-300 transition">Giải pháp ngành</a></li>
+            <li><a href="pricing.html" class="hover:text-brand-600 dark:hover:text-emerald-300 transition">Bảng giá</a></li>
+            <li><a href="index.html#blog" class="hover:text-brand-600 dark:hover:text-emerald-300 transition">Tin tức</a></li>
+          </ul>
+        </nav>
+
+        <nav aria-labelledby="footer-support-heading">
+          <h3 id="footer-support-heading" class="font-bold text-ink dark:text-ink-invert mb-4 text-xs uppercase tracking-wider">
+            Hỗ trợ
+          </h3>
+          <ul class="space-y-2.5 text-xs">
+            <li><a href="index.html#faq" class="hover:text-brand-600 dark:hover:text-emerald-300 transition">Trung tâm trợ giúp</a></li>
+            <li><a href="index.html#faq" class="hover:text-brand-600 dark:hover:text-emerald-300 transition">Tài liệu API</a></li>
+            <li><a href="index.html#features" class="hover:text-brand-600 dark:hover:text-emerald-300 transition">Cộng đồng ESG</a></li>
+            <li><a href="contact.html" class="hover:text-brand-600 dark:hover:text-emerald-300 transition">Liên hệ hỗ trợ</a></li>
+          </ul>
+        </nav>
+
+        <nav aria-labelledby="footer-contact-heading">
+          <h3 id="footer-contact-heading" class="font-bold text-ink dark:text-ink-invert mb-4 text-xs uppercase tracking-wider">
+            Trụ sở chính
+          </h3>
+          <address class="not-italic text-xs text-muted dark:text-muted-invert space-y-2">
+            <p>Tầng 8, Tòa nhà Green Tower</p>
+            <p>Hóc Môn, Phường Đông Thạnh, TP. Hồ Chí Minh, Việt Nam</p>
+            <p>Email: 2551050108khoa@bloom.eco</p>
+          </address>
+        </nav>
+      </div>
+
+      <div class="mx-auto w-full max-w-6xl px-5 mt-12 pt-6 border-t border-line dark:border-line-invert text-center text-xs text-muted dark:text-muted-invert">
+        <p>© 2026 Bloom Sustainable Solutions. Tất cả quyền được bảo lưu.</p>
+      </div>
+    </footer>
+  </body>
+</html>
