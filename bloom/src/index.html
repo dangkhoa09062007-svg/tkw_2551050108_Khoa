@@ -3,11 +3,12 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<<<<<<< HEAD
-    <title>Bloom - Giải pháp Phát triển Bền vững & ESG (Landwind Figma)</title>
-=======
+    <script>
+  if (localStorage.getItem("bloom-dark-mode") === "dark") {
+    document.documentElement.classList.add("dark");
+  }
+</script>
     <title>Bloom - Giải pháp Phát triển Bền vững & ESG</title>
->>>>>>> a0d7453e7a17a9b2788c25e72719fe7120aa995f
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
@@ -19,19 +20,11 @@
       Bỏ qua đến nội dung chính
     </a>
 
-<<<<<<< HEAD
-    <!-- 1. HEADER / NAVBAR (STICKY) -->
-    <header class="bg-surface/90 dark:bg-surface-dark/90 border-b border-line dark:border-line-invert sticky top-0 z-40 backdrop-blur-md transition-colors">
-      <div class="mx-auto w-full max-w-6xl px-4 sm:px-6 py-3.5 flex items-center justify-between">
-        <!-- Logo -->
-        <a href="index.html" class="inline-flex items-center gap-2.5 text-xl sm:text-2xl font-bold text-ink dark:text-ink-invert">
-=======
     <!-- 1. HEADER / NAVBAR -->
     <header class="bg-surface/90 dark:bg-surface-dark/90 border-b border-line dark:border-line-invert sticky top-0 z-40 backdrop-blur-md transition-colors">
       <div class="mx-auto w-full max-w-6xl px-5 py-4 flex items-center justify-between">
         <!-- Brand Logo -->
         <a href="index.html" class="inline-flex items-center gap-2 text-2xl font-bold text-ink dark:text-ink-invert">
->>>>>>> a0d7453e7a17a9b2788c25e72719fe7120aa995f
           <svg class="w-8 h-8 shrink-0" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
             <defs>
               <linearGradient id="bloomLeaf" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -58,19 +51,47 @@
         <!-- Right Controls -->
         <div class="flex items-center gap-2 sm:gap-3 text-sm">
           <!-- Dark Mode Toggle Button -->
-          <button 
-            type="button" 
-            onclick="document.documentElement.classList.toggle('dark')" 
-            title="Chuyển chế độ sáng/tối" 
-            aria-label="Chuyển chế độ sáng tối" 
-            class="p-2 rounded-xl border border-line dark:border-line-invert text-muted dark:text-muted-invert hover:bg-surface-alt dark:hover:bg-surface-dark-alt transition cursor-pointer">
-            <svg class="w-4 h-4 hidden dark:block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
-            </svg>
-            <svg class="w-4 h-4 block dark:hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
-            </svg>
-          </button>
+          <!-- Dark Mode Toggle Button -->
+<button
+  type="button"
+  onclick="
+    const isDark = document.documentElement.classList.toggle('dark');
+    localStorage.setItem('bloom-dark-mode', isDark ? 'dark' : 'light');
+  "
+  title="Chuyển chế độ sáng/tối"
+  aria-label="Chuyển chế độ sáng tối"
+  class="p-2 rounded-xl border border-line dark:border-line-invert text-muted dark:text-muted-invert hover:bg-surface-alt dark:hover:bg-surface-dark-alt transition cursor-pointer"
+>
+  <!-- Sun icon -->
+  <svg
+    class="w-4 h-4 hidden dark:block"
+    fill="none"
+    viewBox="0 0 24 24"
+    stroke="currentColor"
+  >
+    <path
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      stroke-width="2"
+      d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
+    />
+  </svg>
+
+  <!-- Moon icon -->
+  <svg
+    class="w-4 h-4 block dark:hidden"
+    fill="none"
+    viewBox="0 0 24 24"
+    stroke="currentColor"
+  >
+    <path
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      stroke-width="2"
+      d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
+    />
+  </svg>
+</button>
 
           <a href="contact.html" class="hidden sm:inline-flex btn-ghost text-xs sm:text-sm px-3.5 py-2">Đăng nhập</a>
           <a href="pricing.html" class="btn btn-primary text-xs sm:text-sm px-4 py-2">Bắt đầu ngay</a>
@@ -347,28 +368,9 @@
         </div>
       </section>
 
-      <!-- 6. TESTIMONIAL (LANDWIND QUOTE STYLE) -->
-      <section aria-labelledby="testimonials-title" id="testimonials" class="section bg-surface-alt/60 dark:bg-surface-dark-alt/50 border-y border-line dark:border-line-invert my-8">
-        <div class="max-w-4xl mx-auto text-center px-4">
-          <svg class="h-12 w-12 mx-auto mb-5 text-brand-600/40 dark:text-emerald-400/40" viewBox="0 0 24 27" fill="currentColor" aria-hidden="true">
-            <path d="M14.017 18L14.017 10.609C14.017 4.905 17.748 1.039 23 0L23.995 2.151C21.563 3.068 20 5.789 20 8H24V18H14.017ZM0 18V10.609C0 4.905 3.748 1.038 9 0L9.996 2.151C7.563 3.068 6 5.789 6 8H9.983L9.983 18L0 18Z"/>
-          </svg>
-          <blockquote class="text-xl sm:text-2xl lg:text-3xl font-semibold text-ink dark:text-ink-invert leading-relaxed font-display">
-            "Từ khi ứng dụng giải pháp của Bloom, công ty chúng tôi đã cắt giảm hơn 40% lượng khí thải Carbon và đạt chứng nhận ESG quốc tế chỉ trong 6 tháng. Đây là công cụ không thể thiếu cho chiến lược phát triển bền vững."
-          </blockquote>
-          <figcaption class="flex items-center justify-center gap-3 mt-8">
-            <div class="w-11 h-11 bg-brand-600 text-white font-bold rounded-full grid place-items-center text-sm shadow-md">
-              Khoa
-            </div>
-            <div class="text-left">
-              <div class="font-bold text-ink dark:text-ink-invert text-sm sm:text-base">Lê Đăng Khoa</div>
-              <cite class="not-italic text-xs sm:text-sm text-muted dark:text-muted-invert block">Giám đốc Phát triển Bền vững – EcoCorp</cite>
-            </div>
-          </figcaption>
-        </div>
-      </section>
+      
 
-      <!-- 7. STATS / METRICS (LANDWIND 4 STATS) -->
+      <!-- 6. STATS / METRICS (LANDWIND 4 STATS) -->
       <section aria-labelledby="stats-title" id="stats" class="section">
         <div class="text-center max-w-xl mx-auto mb-12">
           <span class="eyebrow">Hiệu quả thực tế</span>
@@ -406,72 +408,28 @@
           </div>
         </dl>
       </section>
+      <!-- 6. TESTIMONIAL (LANDWIND QUOTE STYLE) -->
+      <section aria-labelledby="testimonials-title" id="testimonials" class="section bg-surface-alt/60 dark:bg-surface-dark-alt/50 border-y border-line dark:border-line-invert my-8">
+        <div class="max-w-4xl mx-auto text-center px-4">
+          <svg class="h-12 w-12 mx-auto mb-5 text-brand-600/40 dark:text-emerald-400/40" viewBox="0 0 24 27" fill="currentColor" aria-hidden="true">
+            <path d="M14.017 18L14.017 10.609C14.017 4.905 17.748 1.039 23 0L23.995 2.151C21.563 3.068 20 5.789 20 8H24V18H14.017ZM0 18V10.609C0 4.905 3.748 1.038 9 0L9.996 2.151C7.563 3.068 6 5.789 6 8H9.983L9.983 18L0 18Z"/>
+          </svg>
+          <blockquote class="text-xl sm:text-2xl lg:text-3xl font-semibold text-ink dark:text-ink-invert leading-relaxed font-display">
+            "Từ khi ứng dụng giải pháp của Bloom, công ty chúng tôi đã cắt giảm hơn 40% lượng khí thải Carbon và đạt chứng nhận ESG quốc tế chỉ trong 6 tháng. Đây là công cụ không thể thiếu cho chiến lược phát triển bền vững."
+          </blockquote>
+          <figcaption class="flex items-center justify-center gap-3 mt-8">
+            <div class="w-11 h-11 bg-brand-600 text-white font-bold rounded-full grid place-items-center text-sm shadow-md">
+              Khoa
+            </div>
+            <div class="text-left">
+              <div class="font-bold text-ink dark:text-ink-invert text-sm sm:text-base">Lê Đăng Khoa</div>
+              <cite class="not-italic text-xs sm:text-sm text-muted dark:text-muted-invert block">Giám đốc Phát triển Bền vững – EcoCorp</cite>
+            </div>
+          </figcaption>
+        </div>
+      </section>
 
-<<<<<<< HEAD
       <!-- 8. PRICING SECTION (LANDWIND 3 TIERS) -->
-=======
-      <!-- 6. TESTIMONIAL (LANDWIND QUOTE STYLE) -->
-      <section aria-labelledby="testimonials-title" id="testimonials" class="section bg-surface-alt/60 dark:bg-surface-dark-alt/50 border-y border-line dark:border-line-invert my-8">
-        <div class="max-w-4xl mx-auto text-center px-4">
-          <svg class="h-12 w-12 mx-auto mb-5 text-brand-600/40 dark:text-emerald-400/40" viewBox="0 0 24 27" fill="currentColor" aria-hidden="true">
-            <path d="M14.017 18L14.017 10.609C14.017 4.905 17.748 1.039 23 0L23.995 2.151C21.563 3.068 20 5.789 20 8H24V18H14.017ZM0 18V10.609C0 4.905 3.748 1.038 9 0L9.996 2.151C7.563 3.068 6 5.789 6 8H9.983L9.983 18L0 18Z"/>
-          </svg>
-          <blockquote class="text-xl sm:text-2xl lg:text-3xl font-semibold text-ink dark:text-ink-invert leading-relaxed font-display">
-            "Từ khi ứng dụng giải pháp của Bloom, công ty chúng tôi đã cắt giảm hơn 40% lượng khí thải Carbon và đạt chứng nhận ESG quốc tế chỉ trong 6 tháng. Đây là công cụ không thể thiếu cho chiến lược phát triển bền vững."
-          </blockquote>
-          <figcaption class="flex items-center justify-center gap-3 mt-8">
-            <div class="w-11 h-11 bg-brand-600 text-white font-bold rounded-full grid place-items-center text-sm shadow-md">
-              Khoa
-            </div>
-            <div class="text-left">
-              <div class="font-bold text-ink dark:text-ink-invert text-sm sm:text-base">Lê Đăng Khoa</div>
-              <cite class="not-italic text-xs sm:text-sm text-muted dark:text-muted-invert block">Giám đốc Phát triển Bền vững – EcoCorp</cite>
-            </div>
-          </figcaption>
-        </div>
-      </section>
-
-      <!-- 7. STATS / METRICS -->
-      <section aria-labelledby="stats-title" id="stats" class="section">
-        <div class="text-center max-w-xl mx-auto mb-12">
-          <span class="eyebrow">Hiệu quả thực tế</span>
-          <h2 id="stats-title" class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-ink dark:text-ink-invert font-display">
-            Tác động đo lường được
-          </h2>
-          <p class="text-muted dark:text-muted-invert text-sm sm:text-base mt-2">
-            Những con số thực tế chứng minh hiệu quả từ nền tảng Bloom.
-          </p>
-        </div>
-
-        <dl class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 text-center">
-          <div class="card p-6">
-            <dd class="text-4xl lg:text-5xl font-extrabold text-brand-600 dark:text-emerald-400 font-display">120+</dd>
-            <dt class="mt-2 text-sm font-semibold text-ink dark:text-ink-invert">Dự án năng lượng xanh</dt>
-            <p class="text-xs text-muted dark:text-muted-invert mt-1">Đã triển khai thành công</p>
-          </div>
-
-          <div class="card p-6">
-            <dd class="text-4xl lg:text-5xl font-extrabold text-brand-600 dark:text-emerald-400 font-display">2.5K+</dd>
-            <dt class="mt-2 text-sm font-semibold text-ink dark:text-ink-invert">Doanh nghiệp tin dùng</dt>
-            <p class="text-xs text-muted dark:text-muted-invert mt-1">Trên toàn cầu</p>
-          </div>
-
-          <div class="card p-6">
-            <dd class="text-4xl lg:text-5xl font-extrabold text-brand-600 dark:text-emerald-400 font-display">98%</dd>
-            <dt class="mt-2 text-sm font-semibold text-ink dark:text-ink-invert">Tác động tích cực</dt>
-            <p class="text-xs text-muted dark:text-muted-invert mt-1">Khách hàng đạt chỉ tiêu ESG</p>
-          </div>
-
-          <div class="card p-6">
-            <dd class="text-4xl lg:text-5xl font-extrabold text-brand-600 dark:text-emerald-400 font-display">99.9%</dd>
-            <dt class="mt-2 text-sm font-semibold text-ink dark:text-ink-invert">Cam kết SLA Uptime</dt>
-            <p class="text-xs text-muted dark:text-muted-invert mt-1">Độ ổn định hệ thống</p>
-          </div>
-        </dl>
-      </section>
-
-      <!-- 8. PRICING SECTION -->
->>>>>>> a0d7453e7a17a9b2788c25e72719fe7120aa995f
       <section aria-labelledby="pricing-title" id="pricing" class="section border-t border-line dark:border-line-invert">
         <div class="text-center max-w-2xl mx-auto mb-14">
           <span class="eyebrow">Bảng giá linh hoạt</span>
@@ -582,11 +540,7 @@
         </ul>
       </section>
 
-<<<<<<< HEAD
       <!-- 9. FAQ SECTION (LANDWIND ACCORDION) -->
-=======
-      <!-- 9. FAQ SECTION -->
->>>>>>> a0d7453e7a17a9b2788c25e72719fe7120aa995f
       <section aria-labelledby="faq-title" id="faq" class="section">
         <div class="text-center max-w-2xl mx-auto mb-12">
           <span class="eyebrow">Giải đáp thắc mắc</span>
@@ -605,53 +559,32 @@
               <span class="text-brand-600 dark:text-emerald-400 group-open:rotate-180 transition shrink-0">▼</span>
             </summary>
             <p class="text-sm text-muted dark:text-muted-invert mt-3 leading-relaxed">
-<<<<<<< HEAD
               Có. Bloom cung cấp hệ thống API RESTful và Webhook linh hoạt giúp dễ dàng kết nối dữ liệu từ các hệ thống ERP (SAP, Oracle), CRM hoặc máy đo năng lượng IoT hiện có của bạn chỉ trong vài bước đơn giản.
-=======
-              Có. Bloom cung cấp hệ thống API linh hoạt giúp dễ dàng tích hợp dữ liệu từ hệ thống ERP, CRM hoặc máy đo năng lượng IoT hiện có của bạn.
->>>>>>> a0d7453e7a17a9b2788c25e72719fe7120aa995f
             </p>
           </details>
 
           <details class="card group cursor-pointer p-6">
             <summary class="font-bold text-ink dark:text-ink-invert list-none flex justify-between items-center gap-4 text-base">
-<<<<<<< HEAD
               <span>Tôi có thể bắt đầu dùng thử miễn phí như thế nào?</span>
               <span class="text-brand-600 dark:text-emerald-400 group-open:rotate-180 transition shrink-0">▼</span>
             </summary>
             <p class="text-sm text-muted dark:text-muted-invert mt-3 leading-relaxed">
               Bạn có thể đăng ký trải nghiệm toàn bộ tính năng của gói Chuyên nghiệp trong 30 ngày mà không cần cung cấp thẻ tín dụng. Đội ngũ kỹ sư sẽ hỗ trợ bạn cấu hình hệ thống ngay trong ngày đầu tiên.
-=======
-              <span>Thời gian triển khai giải pháp mất bao lâu?</span>
-              <span class="text-brand-600 dark:text-emerald-400 group-open:rotate-180 transition shrink-0">▼</span>
-            </summary>
-            <p class="text-sm text-muted dark:text-muted-invert mt-3 leading-relaxed">
-              Thông thường với gói Cơ bản và Chuyên nghiệp, bạn có thể thiết lập và bắt đầu theo dõi dữ liệu chỉ trong vòng 24 đến 48 giờ.
->>>>>>> a0d7453e7a17a9b2788c25e72719fe7120aa995f
             </p>
           </details>
 
           <details class="card group cursor-pointer p-6">
             <summary class="font-bold text-ink dark:text-ink-invert list-none flex justify-between items-center gap-4 text-base">
-<<<<<<< HEAD
               <span>Chính sách hủy dịch vụ và hoàn tiền của Bloom như thế nào?</span>
               <span class="text-brand-600 dark:text-emerald-400 group-open:rotate-180 transition shrink-0">▼</span>
             </summary>
             <p class="text-sm text-muted dark:text-muted-invert mt-3 leading-relaxed">
               Chúng tôi không ràng buộc hợp đồng dài hạn đối với các gói dịch vụ tiêu chuẩn. Bạn có thể nâng cấp, hạ cấp hoặc hủy gói bất kỳ lúc nào. Bloom cam kết hoàn tiền 100% trong 14 ngày đầu tiên nếu bạn không hài lòng.
-=======
-              <span>Tôi có thể hủy gói dịch vụ bất cứ lúc nào không?</span>
-              <span class="text-brand-600 dark:text-emerald-400 group-open:rotate-180 transition shrink-0">▼</span>
-            </summary>
-            <p class="text-sm text-muted dark:text-muted-invert mt-3 leading-relaxed">
-              Hoàn toàn có thể. Chúng tôi không cam kết hợp đồng dài hạn bắt buộc đối với các gói dịch vụ tiêu chuẩn. Bạn có thể linh hoạt chuyển đổi gói hoặc hủy bất kỳ lúc nào.
->>>>>>> a0d7453e7a17a9b2788c25e72719fe7120aa995f
             </p>
           </details>
 
           <details class="card group cursor-pointer p-6">
             <summary class="font-bold text-ink dark:text-ink-invert list-none flex justify-between items-center gap-4 text-base">
-<<<<<<< HEAD
               <span>Dữ liệu phát thải và năng lượng của doanh nghiệp có được bảo mật không?</span>
               <span class="text-brand-600 dark:text-emerald-400 group-open:rotate-180 transition shrink-0">▼</span>
             </summary>
@@ -667,23 +600,12 @@
             </summary>
             <p class="text-sm text-muted dark:text-muted-invert mt-3 leading-relaxed">
               Bloom hỗ trợ xuất báo cáo tương thích 100% với các chuẩn toàn cầu phổ biến nhất hiện nay như GRI Standards, GHG Protocol (Scope 1, 2, 3), IFRS S1/S2, TCFD và quy định báo cáo phát triển bền vững của Bộ Tài nguyên & Môi trường.
-=======
-              <span>Dữ liệu phát thải của doanh nghiệp có được bảo mật không?</span>
-              <span class="text-brand-600 dark:text-emerald-400 group-open:rotate-180 transition shrink-0">▼</span>
-            </summary>
-            <p class="text-sm text-muted dark:text-muted-invert mt-3 leading-relaxed">
-              Tất cả dữ liệu được lưu trữ trên hạ tầng máy chủ đạt tiêu chuẩn bảo mật quốc tế ISO/IEC 27001 và được mã hóa đầu cuối nghiêm ngặt.
->>>>>>> a0d7453e7a17a9b2788c25e72719fe7120aa995f
             </p>
           </details>
         </div>
       </section>
 
-<<<<<<< HEAD
       <!-- 10. TRIAL CTA BANNER (LANDWIND PRE-FOOTER) -->
-=======
-      <!-- 10. TRIAL CTA BANNER -->
->>>>>>> a0d7453e7a17a9b2788c25e72719fe7120aa995f
       <section aria-labelledby="cta-title" id="cta" class="section pt-0">
         <div class="bg-brand-600 text-white rounded-3xl p-8 sm:p-12 md:p-16 text-center shadow-xl">
           <h2 id="cta-title" class="text-2xl sm:text-3xl md:text-4xl font-extrabold mb-4 font-display">
@@ -704,11 +626,7 @@
       </section>
     </main>
 
-<<<<<<< HEAD
     <!-- 11. FOOTER (LANDWIND 4 COLUMNS + SOCIAL ICONS) -->
-=======
-    <!-- 11. FOOTER -->
->>>>>>> a0d7453e7a17a9b2788c25e72719fe7120aa995f
     <footer class="border-t border-line dark:border-line-invert bg-surface-alt/70 dark:bg-surface-dark-alt/50 py-16 text-sm text-muted dark:text-muted-invert">
       <div class="mx-auto w-full max-w-6xl px-5 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
         <!-- BRAND -->
