@@ -11,10 +11,6 @@
 ## 1. Link & Deploy
 
 - **Figma Design Reference**: [Landwind - Tailwind CSS Landing Page](https://www.figma.com/design/75ddYYpn0x33POxewcXaVE/Landwind---Tailwind-CSS-Landing-Page--Community-?node-id=1-19856&p=f&t=OsyRTE0Kes7jHN2P-0)
-- **GitHub Repository**: [https://github.com/dangkhoa09062007-svg/tkw_2551050108_Khoa](https://github.com/dangkhoa09062007-svg/tkw_2551050108_Khoa)
-- **URL Deploy (GitHub Pages)**: [https://dangkhoa09062007-svg.github.io/tkw_2551050108_Khoa/bloom/src/index.html](https://dangkhoa09062007-svg.github.io/tkw_2551050108_Khoa/bloom/src/index.html)
-
----
 
 ## 2. Hệ Thống Design Tokens & Rebrand
 
