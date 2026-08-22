@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script>
-  if (localStorage.getItem("bloom-dark-mode") === "dark") {
-    document.documentElement.classList.add("dark");
-  }
-</script>
+      if (localStorage.getItem("bloom-dark-mode") === "dark") {
+        document.documentElement.classList.add("dark");
+      }
+    </script>
     <title>Bloom - Giải pháp Phát triển Bền vững & ESG</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,13 +25,11 @@
       <div class="mx-auto w-full max-w-6xl px-5 py-4 flex items-center justify-between">
         <!-- Brand Logo -->
         <a href="index.html" class="inline-flex items-center gap-2 text-2xl font-bold text-ink dark:text-ink-invert">
-            
-        <img
-          src="../assets/img/logo.png"
-          alt="Bloom logo"
-          class="h-12 w-auto object-contain"
-        />
-
+          <img
+            src="../assets/img/logo.png"
+            alt="Bloom logo"
+            class="h-12 w-auto object-contain"
+          />
           <span class="tracking-tight text-brand-700 dark:text-emerald-400 font-extrabold font-display">
             Bloom
           </span>
@@ -51,46 +49,46 @@
         <div class="flex items-center gap-2 sm:gap-3 text-sm">
           <!-- Dark Mode Toggle Button -->
           <!-- Dark Mode Toggle Button -->
-<button
-  type="button"
-  onclick="
-    const isDark = document.documentElement.classList.toggle('dark');
-    localStorage.setItem('bloom-dark-mode', isDark ? 'dark' : 'light');
-  "
-  title="Chuyển chế độ sáng/tối"
-  aria-label="Chuyển chế độ sáng tối"
-  class="p-2 rounded-xl border border-line dark:border-line-invert text-muted dark:text-muted-invert hover:bg-surface-alt dark:hover:bg-surface-dark-alt transition cursor-pointer"
->
-  <!-- Sun icon -->
-  <svg
-    class="w-4 h-4 hidden dark:block"
-    fill="none"
-    viewBox="0 0 24 24"
-    stroke="currentColor"
-  >
-    <path
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      stroke-width="2"
-      d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
-    />
-  </svg>
+          <button
+            type="button"
+            onclick="
+              const isDark = document.documentElement.classList.toggle('dark');
+              localStorage.setItem('bloom-dark-mode', isDark ? 'dark' : 'light');
+            "
+            title="Chuyển chế độ sáng/tối"
+            aria-label="Chuyển chế độ sáng tối"
+            class="p-2 rounded-xl border border-line dark:border-line-invert text-muted dark:text-muted-invert hover:bg-surface-alt dark:hover:bg-surface-dark-alt transition cursor-pointer"
+          >
+            <!-- Sun icon -->
+            <svg
+              class="w-4 h-4 hidden dark:block"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
+              />
+            </svg>
 
-  <!-- Moon icon -->
-  <svg
-    class="w-4 h-4 block dark:hidden"
-    fill="none"
-    viewBox="0 0 24 24"
-    stroke="currentColor"
-  >
-    <path
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      stroke-width="2"
-      d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
-    />
-  </svg>
-</button>
+            <!-- Moon icon -->
+            <svg
+              class="w-4 h-4 block dark:hidden"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
+              />
+            </svg>
+          </button>
 
           <a href="contact.html" class="hidden sm:inline-flex btn-ghost text-xs sm:text-sm px-3.5 py-2">Đăng nhập</a>
           <a href="pricing.html" class="btn btn-primary text-xs sm:text-sm px-4 py-2">Bắt đầu ngay</a>
@@ -137,25 +135,24 @@
               Bắt đầu dùng thử 30 ngày
             </a>
             <a
-  href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-  target="_blank"
-  rel="noopener noreferrer"
-  class="btn btn-secondary px-6 py-3.5 text-base"
->
-  <svg
-    class="w-5 h-5 text-brand-600 dark:text-emerald-400"
-    fill="currentColor"
-    viewBox="0 0 20 20"
-  >
-    <path
-      fill-rule="evenodd"
-      d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z"
-      clip-rule="evenodd"
-    />
-  </svg>
-
-  Xem video giới thiệu
-</a>
+              href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn btn-secondary px-6 py-3.5 text-base"
+            >
+              <svg
+                class="w-5 h-5 text-brand-600 dark:text-emerald-400"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+             Xem video giới thiệu
+            </a>
           </div>
           <p class="text-xs text-muted dark:text-muted-invert flex items-center gap-2">
             <span>✓ Miễn phí 30 ngày dùng thử</span>
