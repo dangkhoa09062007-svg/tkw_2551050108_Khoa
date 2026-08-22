@@ -15,9 +15,10 @@
       Bỏ qua đến nội dung chính
     </a>
 
-    <!-- HEADER -->
+    <!-- 1. HEADER / NAVBAR -->
     <header class="bg-surface/90 dark:bg-surface-dark/90 border-b border-line dark:border-line-invert sticky top-0 z-40 backdrop-blur-md transition-colors">
       <div class="mx-auto w-full max-w-6xl px-5 py-4 flex items-center justify-between">
+        <!-- Brand Logo -->
         <a href="index.html" class="inline-flex items-center gap-2 text-2xl font-bold text-ink dark:text-ink-invert">
           <svg class="w-8 h-8 shrink-0" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
             <defs>
@@ -29,11 +30,11 @@
             <path d="M27 4C27 4 14 5.5 7.5 14C3 20 4.5 25 7 27C9.5 29 14.5 28 19 23.5C25 17.5 27 4 27 4Z" fill="url(#bloomLeaf)"/>
             <path d="M7 27C12.5 21 18.5 14 27 4" stroke="white" stroke-width="2" stroke-linecap="round" opacity="0.9"/>
           </svg>
-          <span class="tracking-tight text-brand-700 dark:text-emerald-400 font-extrabold">Bloom</span>
+          <span class="tracking-tight text-brand-700 dark:text-emerald-400 font-extrabold font-display">Bloom</span>
         </a>
 
         <!-- Desktop Navigation -->
-        <nav aria-label="Điều hướng chính" class="hidden lg:flex items-center gap-6 text-sm font-medium">
+        <nav aria-label="Điều hướng chính" class="hidden lg:flex items-center gap-7 text-sm font-medium">
           <a href="index.html" class="text-brand-600 dark:text-emerald-400 font-semibold">Trang chủ</a>
           <a href="index.html#features" class="text-muted hover:text-brand-600 dark:text-muted-invert dark:hover:text-emerald-300 transition">Tính năng</a>
           <a href="index.html#solutions" class="text-muted hover:text-brand-600 dark:text-muted-invert dark:hover:text-emerald-300 transition">Giải pháp</a>
@@ -42,6 +43,7 @@
           <a href="index.html#faq" class="text-muted hover:text-brand-600 dark:text-muted-invert dark:hover:text-emerald-300 transition">FAQ</a>
         </nav>
 
+        <!-- Right Controls -->
         <div class="flex items-center gap-2 sm:gap-3 text-sm">
           <!-- Dark Mode Toggle Button -->
           <button 
@@ -86,109 +88,119 @@
     </header>
 
     <main id="main">
-      <!-- HERO -->
-      <section aria-labelledby="hero-title" id="hero" class="section grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-        <div>
+      <!-- 2. HERO SECTION -->
+      <section aria-labelledby="hero-title" id="hero" class="section grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-center pt-8 pb-16 lg:py-24">
+        <div class="lg:col-span-7">
           <span class="eyebrow">
-            🌱 Tương lai bền vững
+            🌱 Tương lai xanh bền vững
           </span>
-          <h1 id="hero-title" class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-ink dark:text-ink-invert mb-4 leading-tight">
+          <h1 id="hero-title" class="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-extrabold text-ink dark:text-ink-invert mb-5 tracking-tight leading-tight font-display">
             Phát triển doanh nghiệp <span class="text-brand-600 dark:text-emerald-400">với giải pháp xanh.</span>
           </h1>
-          <p class="text-muted dark:text-muted-invert mb-8 text-base sm:text-lg leading-relaxed">
-            Bloom giúp các công ty chuyển đổi mô hình vận hành thân thiện với môi trường, tự động hóa đo lường chỉ số ESG và tối ưu hóa chi phí năng lượng.
+          <p class="text-muted dark:text-muted-invert mb-8 text-base sm:text-lg lg:text-xl font-normal leading-relaxed max-w-2xl">
+            Bloom giúp các doanh nghiệp chuyển đổi mô hình vận hành thân thiện với môi trường, tự động hóa đo lường chỉ số ESG và tối ưu hóa chi phí năng lượng.
           </p>
-          <div class="flex flex-wrap gap-4 items-center">
-            <a href="#solutions" class="btn btn-primary px-6 py-3">
-              Khám phá giải pháp
+          <div class="flex flex-wrap gap-4 items-center mb-6">
+            <a href="pricing.html" class="btn btn-primary px-6 py-3.5 text-base shadow-sm">
+              Bắt đầu dùng thử 30 ngày
             </a>
             <button 
               type="button" 
               onclick="document.getElementById('videoModal').showModal()"
-              class="btn btn-secondary px-6 py-3">
-              Xem video ngay
+              class="btn btn-secondary px-6 py-3.5 text-base">
+              <svg class="w-5 h-5 text-brand-600 dark:text-emerald-400" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd"/>
+              </svg>
+              Xem video giới thiệu
             </button>
           </div>
+          <p class="text-xs text-muted dark:text-muted-invert flex items-center gap-2">
+            <span>✓ Miễn phí 30 ngày dùng thử</span>
+            <span>•</span>
+            <span>✓ Không yêu cầu thẻ tín dụng</span>
+          </p>
         </div>
-        <div class="flex justify-center items-center">
+
+        <div class="lg:col-span-5 flex justify-center items-center">
           <img 
             src="../assets/img/bloom-3d.png" 
             alt="Mô phỏng 3D giải pháp năng lượng xanh Bloom" 
-            class="w-full h-auto max-h-[420px] object-contain rounded-2xl drop-shadow-xl"
+            class="w-full h-auto max-h-[440px] object-contain rounded-2xl drop-shadow-2xl"
           />
         </div>
       </section>
 
-      <!-- LOGOS -->
+      <!-- 3. LOGO CLOUD / SOCIAL PROOF -->
       <section aria-label="Đối tác uy tín" id="logos" class="border-y border-line dark:border-line-invert bg-surface-alt/70 dark:bg-surface-dark-alt/50 py-12">
         <div class="mx-auto w-full max-w-6xl px-5">
-          <p class="text-center text-xs font-semibold text-muted dark:text-muted-invert uppercase tracking-wider mb-6">Được tin dùng bởi hơn 2,500+ doanh nghiệp toàn cầu</p>
-          <ul class="flex flex-wrap items-center justify-center gap-x-10 sm:gap-x-12 gap-y-6 text-muted/70 dark:text-muted-invert/70 font-bold text-lg sm:text-xl select-none">
-            <li class="hover:text-ink dark:hover:text-ink-invert transition">Google</li>
-            <li class="hover:text-ink dark:hover:text-ink-invert transition">Microsoft</li>
-            <li class="hover:text-ink dark:hover:text-ink-invert transition">Spotify</li>
-            <li class="hover:text-ink dark:hover:text-ink-invert transition">Mailchimp</li>
-            <li class="hover:text-ink dark:hover:text-ink-invert transition">Airbnb</li>
-            <li class="hover:text-ink dark:hover:text-ink-invert transition">Uber</li>
-          </ul>
+          <p class="text-center text-xs font-semibold text-muted dark:text-muted-invert uppercase tracking-wider mb-8">
+            Được tin dùng bởi hơn 2,500+ doanh nghiệp và tổ chức toàn cầu
+          </p>
+          <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-8 items-center justify-items-center text-muted/75 dark:text-muted-invert/75 font-bold text-lg sm:text-xl select-none">
+            <span class="hover:text-ink dark:hover:text-ink-invert transition">Google</span>
+            <span class="hover:text-ink dark:hover:text-ink-invert transition">Microsoft</span>
+            <span class="hover:text-ink dark:hover:text-ink-invert transition">Spotify</span>
+            <span class="hover:text-ink dark:hover:text-ink-invert transition">Mailchimp</span>
+            <span class="hover:text-ink dark:hover:text-ink-invert transition">Airbnb</span>
+            <span class="hover:text-ink dark:hover:text-ink-invert transition">Uber</span>
+          </div>
         </div>
       </section>
 
-      <!-- FEATURES -->
+      <!-- 4. FEATURE 1: WORK WITH TOOLS YOU ALREADY USE -->
       <section aria-labelledby="features-title" id="features" class="section">
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <!-- LEFT -->
-          <div>
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          <!-- LEFT CONTENT -->
+          <div class="lg:col-span-7">
             <span class="eyebrow">
-              Tính năng
+              Tính năng nổi bật
             </span>
-
-            <h2 id="features-title" class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-ink dark:text-ink-invert tracking-tight leading-tight">
+            <h2 id="features-title" class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-ink dark:text-ink-invert tracking-tight leading-tight font-display">
               Làm việc với những công cụ bạn đã sử dụng
             </h2>
-
-            <p class="text-muted dark:text-muted-invert mt-4 leading-relaxed">
+            <p class="text-muted dark:text-muted-invert mt-4 text-base sm:text-lg leading-relaxed">
               Bloom giúp doanh nghiệp kết nối các nguồn dữ liệu hiện có, tự động hóa quy trình đo lường và quản lý các chỉ số phát triển bền vững mà không cần thay đổi toàn bộ hệ thống đang sử dụng.
             </p>
-            <ul class="mt-8 space-y-5">
-              <li class="flex gap-4">
-                <span class="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-brand-50 text-brand-600 dark:bg-emerald-950 dark:text-emerald-400">
-                  <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M12 5l7 7-7 7"/>
-                  </svg>
-                </span>
-                <div>
-                  <h3 class="font-bold text-ink dark:text-ink-invert">Kết nối dữ liệu nhanh chóng</h3>
-                  <p class="text-sm text-muted dark:text-muted-invert mt-1 leading-relaxed">
-                    Kết nối ERP, CRM, hệ thống năng lượng và các nguồn dữ liệu doanh nghiệp đang sử dụng.
-                  </p>
-                </div>
-              </li>
 
-              <li class="flex gap-4">
-                <span class="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-brand-50 text-brand-600 dark:bg-emerald-950 dark:text-emerald-400">
-                  <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622C17.176 19.29 21 14.591 21 9c0-.695-.06-1.376-.174-2.036z"/>
-                  </svg>
-                </span>
-                <div>
-                  <h3 class="font-bold text-ink dark:text-ink-invert">Theo dõi ESG tự động</h3>
-                  <p class="text-sm text-muted dark:text-muted-invert mt-1 leading-relaxed">
-                    Theo dõi điện, nước, phát thải carbon và các chỉ số ESG theo thời gian thực.
-                  </p>
-                </div>
-              </li>
-
-              <li class="flex gap-4">
-                <span class="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-brand-50 text-brand-600 dark:bg-emerald-950 dark:text-emerald-400">
+            <ul class="mt-8 space-y-6">
+              <li class="flex gap-4 items-start">
+                <span class="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-brand-50 text-brand-600 dark:bg-emerald-950 dark:text-emerald-400 border border-brand-100 dark:border-line-invert">
                   <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
                   </svg>
                 </span>
                 <div>
-                  <h3 class="font-bold text-ink dark:text-ink-invert">Tối ưu bằng AI</h3>
+                  <h3 class="font-bold text-ink dark:text-ink-invert text-base">Kết nối dữ liệu nhanh chóng</h3>
                   <p class="text-sm text-muted dark:text-muted-invert mt-1 leading-relaxed">
-                    AI phân tích dữ liệu và đề xuất những phương án giúp doanh nghiệp tiết kiệm chi phí vận hành.
+                    Kết nối ERP, CRM, hệ thống năng lượng và các nguồn dữ liệu doanh nghiệp đang sử dụng qua API mở.
+                  </p>
+                </div>
+              </li>
+
+              <li class="flex gap-4 items-start">
+                <span class="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-brand-50 text-brand-600 dark:bg-emerald-950 dark:text-emerald-400 border border-brand-100 dark:border-line-invert">
+                  <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622C17.176 19.29 21 14.591 21 9c0-.695-.06-1.376-.174-2.036z"/>
+                  </svg>
+                </span>
+                <div>
+                  <h3 class="font-bold text-ink dark:text-ink-invert text-base">Theo dõi ESG tự động theo thời gian thực</h3>
+                  <p class="text-sm text-muted dark:text-muted-invert mt-1 leading-relaxed">
+                    Theo dõi điện, nước, phát thải carbon và các chỉ số phát triển bền vững theo thời gian thực.
+                  </p>
+                </div>
+              </li>
+
+              <li class="flex gap-4 items-start">
+                <span class="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-brand-50 text-brand-600 dark:bg-emerald-950 dark:text-emerald-400 border border-brand-100 dark:border-line-invert">
+                  <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M12 5l7 7-7 7"/>
+                  </svg>
+                </span>
+                <div>
+                  <h3 class="font-bold text-ink dark:text-ink-invert text-base">Tối ưu chi phí vận hành bằng AI</h3>
+                  <p class="text-sm text-muted dark:text-muted-invert mt-1 leading-relaxed">
+                    AI phân tích dữ liệu và đề xuất những phương án tối ưu giúp doanh nghiệp tiết kiệm chi phí năng lượng.
                   </p>
                 </div>
               </li>
@@ -196,12 +208,12 @@
           </div>
 
           <!-- RIGHT DASHBOARD CARD -->
-          <div class="bg-surface-alt dark:bg-surface-dark-alt rounded-3xl p-6 sm:p-8 border border-line dark:border-line-invert">
-            <div class="card p-6">
+          <div class="lg:col-span-5 bg-surface-alt dark:bg-surface-dark-alt rounded-3xl p-6 sm:p-8 border border-line dark:border-line-invert shadow-sm">
+            <div class="card p-6 shadow-md">
               <div class="flex items-center justify-between mb-6">
                 <div>
-                  <p class="text-xs text-muted dark:text-muted-invert">Tổng quan hệ thống</p>
-                  <h3 class="text-xl font-bold text-ink dark:text-ink-invert mt-1">Bloom Dashboard</h3>
+                  <p class="text-xs text-muted dark:text-muted-invert font-semibold uppercase">Tổng quan hệ thống</p>
+                  <h3 class="text-xl font-bold text-ink dark:text-ink-invert mt-1 font-display">Bloom ESG Dashboard</h3>
                 </div>
                 <span class="badge">Live</span>
               </div>
@@ -220,17 +232,17 @@
                 </div>
 
                 <div class="col-span-2 p-5 rounded-2xl border border-line dark:border-line-invert bg-surface dark:bg-surface-dark">
-                  <div class="flex justify-between items-center mb-4">
+                  <div class="flex justify-between items-center mb-3">
                     <p class="text-sm font-bold text-ink dark:text-ink-invert">
-                      Tiến độ Net-Zero
+                      Tiến độ Net-Zero 2026
                     </p>
                     <span class="text-sm font-bold text-brand-600 dark:text-emerald-400">
                       78%
                     </span>
                   </div>
 
-                  <div class="w-full bg-line dark:bg-line-invert rounded-full h-2">
-                    <div class="bg-brand-600 dark:bg-emerald-500 h-2 rounded-full w-[78%]"></div>
+                  <div class="w-full bg-line dark:bg-line-invert rounded-full h-2.5">
+                    <div class="bg-brand-600 dark:bg-emerald-500 h-2.5 rounded-full w-[78%] transition-all"></div>
                   </div>
                 </div>
               </div>
@@ -239,75 +251,12 @@
         </div>
       </section>
 
-      <!-- HOW IT WORKS -->
-      <section aria-labelledby="how-title" id="how-it-works" class="section">
-        <div class="text-center max-w-2xl mx-auto">
-          <span class="eyebrow">Quy trình</span>
-          <h2 id="how-title" class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-ink dark:text-ink-invert tracking-tight">
-            Cách Bloom hoạt động
-          </h2>
-          <p class="text-muted dark:text-muted-invert mt-3">
-            Ba bước đơn giản để doanh nghiệp bắt đầu hành trình chuyển đổi xanh.
-          </p>
-        </div>
-
-        <ol class="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          <li class="card">
-            <span class="text-sm font-bold text-brand-600 dark:text-emerald-400">
-              01
-            </span>
-            <h3 class="text-xl font-bold text-ink dark:text-ink-invert mt-4">
-              Kết nối dữ liệu
-            </h3>
-            <p class="text-sm text-muted dark:text-muted-invert mt-3 leading-relaxed">
-              Kết nối các nguồn dữ liệu năng lượng, vận hành và phát thải hiện có của doanh nghiệp vào Bloom.
-            </p>
-          </li>
-
-          <li class="card">
-            <span class="text-sm font-bold text-brand-600 dark:text-emerald-400">
-              02
-            </span>
-            <h3 class="text-xl font-bold text-ink dark:text-ink-invert mt-4">
-              Phân tích & đo lường
-            </h3>
-            <p class="text-sm text-muted dark:text-muted-invert mt-3 leading-relaxed">
-              Bloom tự động tổng hợp dữ liệu, theo dõi các chỉ số ESG và xác định những điểm cần tối ưu.
-            </p>
-          </li>
-
-          <li class="card sm:col-span-2 lg:col-span-1">
-            <span class="text-sm font-bold text-brand-600 dark:text-emerald-400">
-              03
-            </span>
-            <h3 class="text-xl font-bold text-ink dark:text-ink-invert mt-4">
-              Tối ưu & phát triển
-            </h3>
-            <p class="text-sm text-muted dark:text-muted-invert mt-3 leading-relaxed">
-              Nhận đề xuất cải thiện từ hệ thống và theo dõi tác động để xây dựng mô hình vận hành bền vững hơn.
-            </p>
-          </li>
-        </ol>
-      </section>
-
-      <!-- SOLUTIONS -->
-      <section aria-labelledby="solutions-title" id="solutions" class="section">
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <div>
-            <span class="eyebrow">Ngành nghề</span>
-            <h2 id="solutions-title" class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-ink dark:text-ink-invert tracking-tight">
-              Giải pháp cho từng ngành nghề
-            </h2>
-            <p class="text-muted dark:text-muted-invert mt-4 leading-relaxed">
-              Tối ưu hóa quy trình chuyển đổi xanh được thiết kế riêng biệt cho từng mô hình doanh nghiệp.
-            </p>
-            <a href="pricing.html" class="inline-flex items-center gap-1 mt-6 text-brand-600 dark:text-emerald-400 font-semibold text-sm hover:underline">
-              Xem các gói giải pháp →
-            </a>
-          </div>
-
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
-            <article class="card">
+      <!-- 5. FEATURE 2: WE INVEST IN WORLD'S POTENTIAL (SOLUTIONS & PROCESS) -->
+      <section aria-labelledby="solutions-title" id="solutions" class="section border-t border-line dark:border-line-invert">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          <!-- LEFT: SOLUTIONS GRID -->
+          <div class="lg:col-span-6 grid grid-cols-1 sm:grid-cols-2 gap-5 order-2 lg:order-1">
+            <article class="card p-6">
               <span class="text-brand-600 dark:text-emerald-400 text-sm font-bold">01</span>
               <h3 class="text-lg font-bold text-ink dark:text-ink-invert mt-3">
                 Sản xuất công nghiệp
@@ -317,168 +266,172 @@
               </p>
             </article>
 
-            <article class="card">
+            <article class="card p-6">
               <span class="text-brand-600 dark:text-emerald-400 text-sm font-bold">02</span>
               <h3 class="text-lg font-bold text-ink dark:text-ink-invert mt-3">
                 Bán lẻ & Chuỗi cung ứng
               </h3>
               <p class="text-sm text-muted dark:text-muted-invert mt-2 leading-relaxed">
-                Giải pháp đóng gói thân thiện môi trường và tối ưu hóa tuyến đường vận chuyển.
+                Giải pháp đóng gói thân thiện môi trường và tối ưu hóa lộ trình giao vận.
               </p>
             </article>
 
-            <article class="card">
+            <article class="card p-6">
               <span class="text-brand-600 dark:text-emerald-400 text-sm font-bold">03</span>
               <h3 class="text-lg font-bold text-ink dark:text-ink-invert mt-3">
                 Công nghệ & Dịch vụ
               </h3>
               <p class="text-sm text-muted dark:text-muted-invert mt-2 leading-relaxed">
-                Số hóa quy trình làm việc không giấy tờ và tối ưu tiêu thụ điện.
+                Số hóa quy trình làm việc không giấy tờ và tối ưu năng lượng văn phòng.
               </p>
             </article>
 
-            <article class="card">
+            <article class="card p-6">
               <span class="text-brand-600 dark:text-emerald-400 text-sm font-bold">04</span>
               <h3 class="text-lg font-bold text-ink dark:text-ink-invert mt-3">
-                Doanh nghiệp xanh
+                Tổ chức tài chính xanh
               </h3>
               <p class="text-sm text-muted dark:text-muted-invert mt-2 leading-relaxed">
-                Xây dựng chiến lược phát triển bền vững và lộ trình Net-Zero.
+                Thẩm định danh mục đầu tư theo tiêu chuẩn ESG quốc tế chuẩn xác.
               </p>
             </article>
           </div>
+
+          <!-- RIGHT: DESCRIPTION -->
+          <div class="lg:col-span-6 order-1 lg:order-2">
+            <span class="eyebrow">Giải pháp toàn diện</span>
+            <h2 id="solutions-title" class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-ink dark:text-ink-invert tracking-tight leading-tight font-display">
+              Đầu tư vào tiềm năng phát triển của doanh nghiệp
+            </h2>
+            <p class="text-muted dark:text-muted-invert mt-4 text-base sm:text-lg leading-relaxed">
+              Chúng tôi mang đến giải pháp toàn diện giúp doanh nghiệp số hóa lộ trình Net-Zero, chuẩn hóa dữ liệu báo cáo ESG và tuân thủ các quy định môi trường quốc tế.
+            </p>
+
+            <ul class="mt-8 space-y-4 text-sm sm:text-base text-ink dark:text-ink-invert">
+              <li class="flex items-center gap-3">
+                <svg class="w-5 h-5 shrink-0 text-brand-600 dark:text-emerald-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                <span>Báo cáo tự động hóa chuẩn quốc tế GRI, GHG Protocol & IFRS S1/S2</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <svg class="w-5 h-5 shrink-0 text-brand-600 dark:text-emerald-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                <span>Tích hợp giải pháp giám sát năng lượng thông minh cho toàn chuỗi</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <svg class="w-5 h-5 shrink-0 text-brand-600 dark:text-emerald-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                <span>Quản trị vòng đời dữ liệu ESG tập trung, minh bạch và bảo mật</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <svg class="w-5 h-5 shrink-0 text-brand-600 dark:text-emerald-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                <span>Đồng hành tư vấn chiến lược 1:1 từ các chuyên gia môi trường hàng đầu</span>
+              </li>
+            </ul>
+
+            <div class="mt-8">
+              <a href="pricing.html" class="btn btn-secondary text-sm px-5 py-2.5">
+                Xem chi tiết các gói giải pháp →
+              </a>
+            </div>
+          </div>
         </div>
       </section>
 
-      <!-- TESTIMONIALS -->
-      <section aria-labelledby="testimonials-title" id="testimonials" class="section">
-        <div class="text-center max-w-2xl mx-auto mb-12">
-          <span class="eyebrow">Nhận xét</span>
-          <h2 id="testimonials-title" class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-ink dark:text-ink-invert">
-            Khách hàng nói gì về Bloom
+      <!-- 6. TESTIMONIAL (LANDWIND QUOTE STYLE) -->
+      <section aria-labelledby="testimonials-title" id="testimonials" class="section bg-surface-alt/60 dark:bg-surface-dark-alt/50 border-y border-line dark:border-line-invert my-8">
+        <div class="max-w-4xl mx-auto text-center px-4">
+          <svg class="h-12 w-12 mx-auto mb-5 text-brand-600/40 dark:text-emerald-400/40" viewBox="0 0 24 27" fill="currentColor" aria-hidden="true">
+            <path d="M14.017 18L14.017 10.609C14.017 4.905 17.748 1.039 23 0L23.995 2.151C21.563 3.068 20 5.789 20 8H24V18H14.017ZM0 18V10.609C0 4.905 3.748 1.038 9 0L9.996 2.151C7.563 3.068 6 5.789 6 8H9.983L9.983 18L0 18Z"/>
+          </svg>
+          <blockquote class="text-xl sm:text-2xl lg:text-3xl font-semibold text-ink dark:text-ink-invert leading-relaxed font-display">
+            "Từ khi ứng dụng giải pháp của Bloom, công ty chúng tôi đã cắt giảm hơn 40% lượng khí thải Carbon và đạt chứng nhận ESG quốc tế chỉ trong 6 tháng. Đây là công cụ không thể thiếu cho chiến lược phát triển bền vững."
+          </blockquote>
+          <figcaption class="flex items-center justify-center gap-3 mt-8">
+            <div class="w-11 h-11 bg-brand-600 text-white font-bold rounded-full grid place-items-center text-sm shadow-md">
+              Khoa
+            </div>
+            <div class="text-left">
+              <div class="font-bold text-ink dark:text-ink-invert text-sm sm:text-base">Lê Đăng Khoa</div>
+              <cite class="not-italic text-xs sm:text-sm text-muted dark:text-muted-invert block">Giám đốc Phát triển Bền vững – EcoCorp</cite>
+            </div>
+          </figcaption>
+        </div>
+      </section>
+
+      <!-- 7. STATS / METRICS -->
+      <section aria-labelledby="stats-title" id="stats" class="section">
+        <div class="text-center max-w-xl mx-auto mb-12">
+          <span class="eyebrow">Hiệu quả thực tế</span>
+          <h2 id="stats-title" class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-ink dark:text-ink-invert font-display">
+            Tác động đo lường được
           </h2>
-          <p class="text-muted dark:text-muted-invert text-sm mt-3">
-            Đánh giá thực tế từ đại diện các tập đoàn đối tác.
+          <p class="text-muted dark:text-muted-invert text-sm sm:text-base mt-2">
+            Những con số thực tế chứng minh hiệu quả từ nền tảng Bloom.
           </p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <figure class="card p-8">
-            <blockquote class="text-ink dark:text-ink-invert italic leading-relaxed">
-              "Từ khi ứng dụng giải pháp của Bloom, công ty chúng tôi đã cắt giảm hơn 40% lượng khí thải Carbon và đạt chứng nhận ESG quốc tế chỉ trong 6 tháng."
-            </blockquote>
-            <figcaption class="flex items-center gap-4 mt-8">
-              <div class="w-12 h-12 bg-brand-600 text-white font-bold rounded-full grid place-items-center">
-                Khoa
-              </div>
-              <div>
-                <span class="block font-bold text-ink dark:text-ink-invert text-sm">
-                  Lê Đăng Khoa
-                </span>
-                <cite class="not-italic text-xs text-muted dark:text-muted-invert">
-                  Giám đốc Bền vững - EcoCorp
-                </cite>
-              </div>
-            </figcaption>
-          </figure>
-
-          <figure class="card p-8">
-            <blockquote class="text-ink dark:text-ink-invert italic leading-relaxed">
-              "Hệ thống báo cáo tự động của Bloom vô cùng chuẩn xác và tiết kiệm hàng trăm giờ làm việc cho đội ngũ nhân sự của chúng tôi mỗi quý."
-            </blockquote>
-            <figcaption class="flex items-center gap-4 mt-8">
-              <div class="w-12 h-12 bg-emerald-700 text-white font-bold rounded-full grid place-items-center">
-                Ngọc
-              </div>
-              <div>
-                <span class="block font-bold text-ink dark:text-ink-invert text-sm">
-                  Nguyễn Đào Bảo Ngọc
-                </span>
-                <cite class="not-italic text-xs text-muted dark:text-muted-invert">
-                  CTO - GreenTech Solutions
-                </cite>
-              </div>
-            </figcaption>
-          </figure>
-        </div>
-      </section>
-
-      <!-- STATS -->
-      <section aria-labelledby="stats-title" id="stats" class="section">
-        <div class="bg-brand-50/80 dark:bg-surface-dark-alt rounded-3xl p-8 md:p-12 border border-brand-100 dark:border-line-invert">
-          <div class="text-center max-w-xl mx-auto mb-10">
-            <h2 id="stats-title" class="text-2xl sm:text-3xl font-bold text-ink dark:text-ink-invert">
-              Tác động đo lường được
-            </h2>
-            <p class="text-muted dark:text-muted-invert text-sm mt-2">
-              Con số thực tế chứng minh hiệu quả từ hệ thống Bloom.
-            </p>
+        <dl class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 text-center">
+          <div class="card p-6">
+            <dd class="text-4xl lg:text-5xl font-extrabold text-brand-600 dark:text-emerald-400 font-display">120+</dd>
+            <dt class="mt-2 text-sm font-semibold text-ink dark:text-ink-invert">Dự án năng lượng xanh</dt>
+            <p class="text-xs text-muted dark:text-muted-invert mt-1">Đã triển khai thành công</p>
           </div>
 
-          <dl class="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-line dark:divide-line-invert">
-            <div class="text-center p-6">
-              <dd class="text-4xl md:text-5xl font-extrabold text-brand-600 dark:text-emerald-400">
-                120+
-              </dd>
-              <dt class="mt-2 text-sm text-muted dark:text-muted-invert font-medium">
-                Dự án năng lượng xanh
-              </dt>
-            </div>
+          <div class="card p-6">
+            <dd class="text-4xl lg:text-5xl font-extrabold text-brand-600 dark:text-emerald-400 font-display">2.5K+</dd>
+            <dt class="mt-2 text-sm font-semibold text-ink dark:text-ink-invert">Doanh nghiệp tin dùng</dt>
+            <p class="text-xs text-muted dark:text-muted-invert mt-1">Trên toàn cầu</p>
+          </div>
 
-            <div class="text-center p-6">
-              <dd class="text-4xl md:text-5xl font-extrabold text-brand-600 dark:text-emerald-400">
-                2.5K+
-              </dd>
-              <dt class="mt-2 text-sm text-muted dark:text-muted-invert font-medium">
-                Khách hàng tin dùng
-              </dt>
-            </div>
+          <div class="card p-6">
+            <dd class="text-4xl lg:text-5xl font-extrabold text-brand-600 dark:text-emerald-400 font-display">98%</dd>
+            <dt class="mt-2 text-sm font-semibold text-ink dark:text-ink-invert">Tác động tích cực</dt>
+            <p class="text-xs text-muted dark:text-muted-invert mt-1">Khách hàng đạt chỉ tiêu ESG</p>
+          </div>
 
-            <div class="text-center p-6">
-              <dd class="text-4xl md:text-5xl font-extrabold text-brand-600 dark:text-emerald-400">
-                98%
-              </dd>
-              <dt class="mt-2 text-sm text-muted dark:text-muted-invert font-medium">
-                Tỷ lệ tác động tích cực
-              </dt>
-            </div>
-          </dl>
-        </div>
+          <div class="card p-6">
+            <dd class="text-4xl lg:text-5xl font-extrabold text-brand-600 dark:text-emerald-400 font-display">99.9%</dd>
+            <dt class="mt-2 text-sm font-semibold text-ink dark:text-ink-invert">Cam kết SLA Uptime</dt>
+            <p class="text-xs text-muted dark:text-muted-invert mt-1">Độ ổn định hệ thống</p>
+          </div>
+        </dl>
       </section>
 
-      <!-- PRICING SUMMARY -->
-      <section aria-labelledby="pricing-title" id="pricing" class="section">
+      <!-- 8. PRICING SECTION -->
+      <section aria-labelledby="pricing-title" id="pricing" class="section border-t border-line dark:border-line-invert">
         <div class="text-center max-w-2xl mx-auto mb-14">
-          <span class="eyebrow">Bảng giá</span>
-          <h2 id="pricing-title" class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-ink dark:text-ink-invert">
-            Chọn gói phù hợp với doanh nghiệp
+          <span class="eyebrow">Bảng giá linh hoạt</span>
+          <h2 id="pricing-title" class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-ink dark:text-ink-invert font-display">
+            Thiết kế dành riêng cho tổ chức của bạn
           </h2>
-          <p class="text-muted dark:text-muted-invert text-sm mt-3">
-            Nâng cấp mô hình bền vững với gói giải pháp linh hoạt.
+          <p class="text-muted dark:text-muted-invert text-sm sm:text-base mt-3">
+            Chọn gói giải pháp phù hợp với quy mô và lộ trình chuyển đổi Net-Zero.
           </p>
         </div>
 
-        <ul class="grid grid-cols-1 lg:grid-cols-3 gap-6 items-stretch">
+        <ul class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
           <!-- BASIC -->
           <li class="card flex flex-col p-8">
-            <h3 class="text-xl font-bold text-ink dark:text-ink-invert">Cơ bản</h3>
-            <p class="text-xs text-muted dark:text-muted-invert mt-1">Cho doanh nghiệp nhỏ bắt đầu</p>
+            <h3 class="text-2xl font-bold text-ink dark:text-ink-invert font-display">Cơ bản</h3>
+            <p class="text-xs text-muted dark:text-muted-invert mt-1">Dành cho startup & doanh nghiệp nhỏ bắt đầu</p>
             <div class="my-6">
-              <span class="text-3xl sm:text-4xl font-extrabold text-ink dark:text-ink-invert">100.000 VND</span>
-              <span class="text-muted dark:text-muted-invert text-sm">/tháng</span>
+              <span class="text-4xl font-extrabold text-ink dark:text-ink-invert font-display">100.000 VND</span>
+              <span class="text-muted dark:text-muted-invert text-sm font-medium">/tháng</span>
             </div>
-            <ul class="space-y-3 text-sm text-muted dark:text-muted-invert mb-8">
+            <ul class="space-y-3.5 text-sm text-muted dark:text-muted-invert mb-8">
               <li class="flex items-center gap-2.5">
                 <svg class="w-4 h-4 shrink-0 text-brand-600 dark:text-emerald-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-                <span>Giám sát 1 điểm vận hành</span>
+                <span>Giám sát 1 điểm vận hành cơ bản</span>
               </li>
               <li class="flex items-center gap-2.5">
                 <svg class="w-4 h-4 shrink-0 text-brand-600 dark:text-emerald-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-                <span>Báo cáo hàng tháng</span>
+                <span>Báo cáo điện nước hàng tháng</span>
               </li>
               <li class="flex items-center gap-2.5">
                 <svg class="w-4 h-4 shrink-0 text-brand-600 dark:text-emerald-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-                <span>Hỗ trợ qua email</span>
+                <span>Xuất file dữ liệu PDF / Excel</span>
+              </li>
+              <li class="flex items-center gap-2.5">
+                <svg class="w-4 h-4 shrink-0 text-brand-600 dark:text-emerald-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                <span>Hỗ trợ kỹ thuật qua Email</span>
               </li>
             </ul>
             <a href="pricing.html" class="mt-auto block text-center btn-secondary py-3 px-6 rounded-pill">
@@ -487,32 +440,32 @@
           </li>
 
           <!-- PROFESSIONAL -->
-          <li class="card relative flex flex-col p-8 ring-2 ring-brand-600 dark:ring-emerald-500 shadow-lg">
-            <span class="absolute -top-3.5 left-6 bg-brand-600 dark:bg-emerald-600 text-white text-xs px-3 py-1 rounded-full font-semibold">
+          <li class="card relative flex flex-col p-8 ring-2 ring-brand-600 dark:ring-emerald-500 shadow-xl">
+            <span class="absolute -top-3.5 left-6 bg-brand-600 dark:bg-emerald-600 text-white text-xs px-3.5 py-1 rounded-full font-semibold">
               Được chọn nhiều nhất
             </span>
-            <h3 class="text-xl font-bold text-ink dark:text-ink-invert">Chuyên nghiệp</h3>
-            <p class="text-xs text-muted dark:text-muted-invert mt-1">Cho doanh nghiệp đang tăng trưởng</p>
+            <h3 class="text-2xl font-bold text-ink dark:text-ink-invert font-display">Chuyên nghiệp</h3>
+            <p class="text-xs text-muted dark:text-muted-invert mt-1">Dành cho doanh nghiệp vừa và đang tăng trưởng</p>
             <div class="my-6">
-              <span class="text-3xl sm:text-4xl font-extrabold text-ink dark:text-ink-invert">250.000 VND</span>
-              <span class="text-muted dark:text-muted-invert text-sm">/tháng</span>
+              <span class="text-4xl font-extrabold text-ink dark:text-ink-invert font-display">250.000 VND</span>
+              <span class="text-muted dark:text-muted-invert text-sm font-medium">/tháng</span>
             </div>
-            <ul class="space-y-3 text-sm text-muted dark:text-muted-invert mb-8">
+            <ul class="space-y-3.5 text-sm text-muted dark:text-muted-invert mb-8">
               <li class="flex items-center gap-2.5">
                 <svg class="w-4 h-4 shrink-0 text-brand-600 dark:text-emerald-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-                <span>Giám sát đến 10 điểm</span>
+                <span>Giám sát đến 10 điểm vận hành</span>
               </li>
               <li class="flex items-center gap-2.5">
                 <svg class="w-4 h-4 shrink-0 text-brand-600 dark:text-emerald-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-                <span>Báo cáo ESG chuẩn quốc tế</span>
+                <span>Báo cáo ESG chuẩn quốc tế (GRI/IFRS)</span>
               </li>
               <li class="flex items-center gap-2.5">
                 <svg class="w-4 h-4 shrink-0 text-brand-600 dark:text-emerald-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-                <span>Gợi ý tối ưu từ AI</span>
+                <span>AI phân tích & đề xuất tối ưu hóa</span>
               </li>
               <li class="flex items-center gap-2.5">
                 <svg class="w-4 h-4 shrink-0 text-brand-600 dark:text-emerald-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-                <span>Hỗ trợ ưu tiên 24/7</span>
+                <span>Hỗ trợ ưu tiên qua Hotline 24/7</span>
               </li>
             </ul>
             <a href="pricing.html" class="mt-auto block text-center btn-primary py-3 px-6 rounded-pill">
@@ -522,24 +475,28 @@
 
           <!-- ENTERPRISE -->
           <li class="card flex flex-col p-8">
-            <h3 class="text-xl font-bold text-ink dark:text-ink-invert">Doanh nghiệp</h3>
-            <p class="text-xs text-muted dark:text-muted-invert mt-1">Giải pháp thiết kế riêng biệt</p>
+            <h3 class="text-2xl font-bold text-ink dark:text-ink-invert font-display">Doanh nghiệp</h3>
+            <p class="text-xs text-muted dark:text-muted-invert mt-1">Dành cho tập đoàn & chuỗi chi nhánh lớn</p>
             <div class="my-6">
-              <span class="text-3xl sm:text-4xl font-extrabold text-ink dark:text-ink-invert">500.000 VND</span>
-              <span class="text-muted dark:text-muted-invert text-sm">/tháng</span>
+              <span class="text-4xl font-extrabold text-ink dark:text-ink-invert font-display">500.000 VND</span>
+              <span class="text-muted dark:text-muted-invert text-sm font-medium">/tháng</span>
             </div>
-            <ul class="space-y-3 text-sm text-muted dark:text-muted-invert mb-8">
+            <ul class="space-y-3.5 text-sm text-muted dark:text-muted-invert mb-8">
               <li class="flex items-center gap-2.5">
                 <svg class="w-4 h-4 shrink-0 text-brand-600 dark:text-emerald-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-                <span>Không giới hạn điểm giám sát</span>
+                <span>Không giới hạn số điểm giám sát</span>
               </li>
               <li class="flex items-center gap-2.5">
                 <svg class="w-4 h-4 shrink-0 text-brand-600 dark:text-emerald-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-                <span>Tích hợp hệ thống API riêng</span>
+                <span>Tích hợp hệ thống API ERP / SAP</span>
               </li>
               <li class="flex items-center gap-2.5">
                 <svg class="w-4 h-4 shrink-0 text-brand-600 dark:text-emerald-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-                <span>Chuyên gia tư vấn 1:1</span>
+                <span>Chuyên gia tư vấn chiến lược Net-Zero 1:1</span>
+              </li>
+              <li class="flex items-center gap-2.5">
+                <svg class="w-4 h-4 shrink-0 text-brand-600 dark:text-emerald-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                <span>Cam kết chất lượng SLA 99.9%</span>
               </li>
             </ul>
             <a href="contact.html" class="mt-auto block text-center btn-secondary py-3 px-6 rounded-pill">
@@ -549,149 +506,89 @@
         </ul>
       </section>
 
-      <!-- BLOG -->
-      <section aria-labelledby="blog-title" id="blog" class="section border-t border-line dark:border-line-invert">
-        <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
-          <div>
-            <span class="eyebrow">Tin tức</span>
-            <h2 id="blog-title" class="text-2xl sm:text-3xl lg:text-4xl font-bold text-ink dark:text-ink-invert">
-              Tin tức & Cập nhật
-            </h2>
-            <p class="text-muted dark:text-muted-invert text-sm mt-2">
-              Xu hướng chuyển đổi xanh và kiến thức ESG mới nhất.
-            </p>
-          </div>
-          <a href="#" class="text-brand-600 dark:text-emerald-400 font-bold text-sm hover:underline">
-            Xem tất cả bài viết →
-          </a>
-        </div>
-
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          <article class="group cursor-pointer">
-            <div class="h-48 rounded-2xl mb-4 overflow-hidden bg-brand-50 dark:bg-surface-dark-alt border border-line dark:border-line-invert">
-              <img
-                src="../assets/img/article-1.svg"
-                alt="Lộ trình đạt Net-Zero cho doanh nghiệp vừa và nhỏ năm 2026"
-                class="w-full h-full object-cover group-hover:scale-105 transition duration-300"
-              />
-            </div>
-            <span class="text-xs font-semibold text-brand-600 dark:text-emerald-400 uppercase">Xu hướng</span>
-            <h3 class="text-lg font-bold text-ink dark:text-ink-invert group-hover:text-brand-600 dark:group-hover:text-emerald-400 transition mt-1">
-              Lộ trình đạt Net-Zero cho doanh nghiệp vừa và nhỏ năm 2026
-            </h3>
-            <p class="text-xs text-muted dark:text-muted-invert mt-2">10 Tháng 8, 2026 • 5 phút đọc</p>
-          </article>
-
-          <article class="group cursor-pointer">
-            <div class="h-48 rounded-2xl mb-4 overflow-hidden bg-brand-50 dark:bg-surface-dark-alt border border-line dark:border-line-invert">
-              <img
-                src="../assets/img/article-2.svg"
-                alt="Cách lập báo cáo Bền vững chuẩn GRI không tốn nhiều nguồn lực"
-                class="w-full h-full object-cover group-hover:scale-105 transition duration-300"
-              />
-            </div>
-            <span class="text-xs font-semibold text-brand-600 dark:text-emerald-400 uppercase">ESG</span>
-            <h3 class="text-lg font-bold text-ink dark:text-ink-invert group-hover:text-brand-600 dark:group-hover:text-emerald-400 transition mt-1">
-              Cách lập báo cáo Bền vững chuẩn GRI không tốn nhiều nguồn lực
-            </h3>
-            <p class="text-xs text-muted dark:text-muted-invert mt-2">05 Tháng 8, 2026 • 8 phút đọc</p>
-          </article>
-
-          <article class="group cursor-pointer sm:col-span-2 lg:col-span-1">
-            <div class="h-48 rounded-2xl mb-4 overflow-hidden bg-brand-50 dark:bg-surface-dark-alt border border-line dark:border-line-invert">
-              <img
-                src="../assets/img/article-3.svg"
-                alt="Ứng dụng AI trong việc cắt giảm năng lượng vận hành nhà máy"
-                class="w-full h-full object-cover group-hover:scale-105 transition duration-300"
-              />
-            </div>
-            <span class="text-xs font-semibold text-brand-600 dark:text-emerald-400 uppercase">Công nghệ</span>
-            <h3 class="text-lg font-bold text-ink dark:text-ink-invert group-hover:text-brand-600 dark:group-hover:text-emerald-400 transition mt-1">
-              Ứng dụng AI trong việc cắt giảm năng lượng vận hành nhà máy
-            </h3>
-            <p class="text-xs text-muted dark:text-muted-invert mt-2">01 Tháng 8, 2026 • 6 phút đọc</p>
-          </article>
-        </div>
-      </section>
-
-      <!-- FAQ -->
-      <section aria-labelledby="faq-title" id="faq" class="section bg-surface-alt/60 dark:bg-surface-dark-alt/50 rounded-3xl border border-line dark:border-line-invert my-12">
-        <div class="grid grid-cols-1 lg:grid-cols-[1fr_1.4fr] gap-12">
-          <div>
-            <span class="eyebrow">Giải đáp</span>
-            <h2 id="faq-title" class="text-2xl sm:text-3xl lg:text-4xl font-bold text-ink dark:text-ink-invert">
-              Câu hỏi thường gặp
-            </h2>
-            <p class="text-muted dark:text-muted-invert text-sm mt-4 leading-relaxed">
-              Bạn có thắc mắc về dịch vụ của chúng tôi? Dưới đây là những giải đáp chi tiết nhất. Nếu cần hỗ trợ thêm, hãy nhắn tin ngay cho đội ngũ tư vấn.
-            </p>
-            <div class="mt-6">
-              <a href="contact.html" class="btn btn-secondary text-sm">Gửi thắc mắc trực tiếp →</a>
-            </div>
-          </div>
-
-          <div class="space-y-4">
-            <details class="card group cursor-pointer">
-              <summary class="font-bold text-ink dark:text-ink-invert list-none flex justify-between items-center gap-4">
-                <span>Bloom có hỗ trợ kết nối với hệ thống phần mềm sẵn có không?</span>
-                <span class="text-brand-600 dark:text-emerald-400 group-open:rotate-180 transition shrink-0">▼</span>
-              </summary>
-              <p class="text-sm text-muted dark:text-muted-invert mt-3 leading-relaxed">
-                Có. Bloom cung cấp hệ thống API linh hoạt giúp dễ dàng tích hợp dữ liệu từ hệ thống ERP, CRM hoặc máy đo năng lượng hiện có của bạn.
-              </p>
-            </details>
-
-            <details class="card group cursor-pointer">
-              <summary class="font-bold text-ink dark:text-ink-invert list-none flex justify-between items-center gap-4">
-                <span>Thời gian triển khai giải pháp mất bao lâu?</span>
-                <span class="text-brand-600 dark:text-emerald-400 group-open:rotate-180 transition shrink-0">▼</span>
-              </summary>
-              <p class="text-sm text-muted dark:text-muted-invert mt-3 leading-relaxed">
-                Thông thường với gói Cơ bản và Chuyên nghiệp, bạn có thể thiết lập và bắt đầu theo dõi dữ liệu chỉ trong vòng 24 đến 48 giờ.
-              </p>
-            </details>
-
-            <details class="card group cursor-pointer">
-              <summary class="font-bold text-ink dark:text-ink-invert list-none flex justify-between items-center gap-4">
-                <span>Tôi có thể hủy dịch vụ bất cứ lúc nào không?</span>
-                <span class="text-brand-600 dark:text-emerald-400 group-open:rotate-180 transition shrink-0">▼</span>
-              </summary>
-              <p class="text-sm text-muted dark:text-muted-invert mt-3 leading-relaxed">
-                Hoàn toàn có thể. Chúng tôi không cam kết hợp đồng dài hạn bắt buộc đối với các gói dịch vụ tiêu chuẩn.
-              </p>
-            </details>
-          </div>
-        </div>
-      </section>
-
-      <!-- CTA -->
-      <section aria-labelledby="cta-title" id="cta" class="section">
-        <div class="bg-brand-600 text-white rounded-3xl p-8 sm:p-12 md:p-16 text-center shadow-xl">
-          <h2 id="cta-title" class="text-2xl sm:text-3xl md:text-4xl font-extrabold mb-4">
-            Sẵn sàng cho chuyến hành trình chuyển đổi xanh?
+      <!-- 9. FAQ SECTION -->
+      <section aria-labelledby="faq-title" id="faq" class="section">
+        <div class="text-center max-w-2xl mx-auto mb-12">
+          <span class="eyebrow">Giải đáp thắc mắc</span>
+          <h2 id="faq-title" class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-ink dark:text-ink-invert font-display">
+            Câu hỏi thường gặp
           </h2>
-          <p class="text-brand-50/90 max-w-xl mx-auto text-sm sm:text-base mb-8">
-            Tham gia cùng hơn 2,500+ doanh nghiệp hàng đầu đang tạo ra tác động tích cực cho môi trường ngay hôm nay.
+          <p class="text-muted dark:text-muted-invert text-sm sm:text-base mt-2">
+            Mọi thông tin cần biết để bạn an tâm triển khai giải pháp ESG Bloom.
+          </p>
+        </div>
+
+        <div class="max-w-3xl mx-auto space-y-4">
+          <details class="card group cursor-pointer p-6">
+            <summary class="font-bold text-ink dark:text-ink-invert list-none flex justify-between items-center gap-4 text-base">
+              <span>Bloom có hỗ trợ kết nối với hệ thống phần mềm sẵn có không?</span>
+              <span class="text-brand-600 dark:text-emerald-400 group-open:rotate-180 transition shrink-0">▼</span>
+            </summary>
+            <p class="text-sm text-muted dark:text-muted-invert mt-3 leading-relaxed">
+              Có. Bloom cung cấp hệ thống API linh hoạt giúp dễ dàng tích hợp dữ liệu từ hệ thống ERP, CRM hoặc máy đo năng lượng IoT hiện có của bạn.
+            </p>
+          </details>
+
+          <details class="card group cursor-pointer p-6">
+            <summary class="font-bold text-ink dark:text-ink-invert list-none flex justify-between items-center gap-4 text-base">
+              <span>Thời gian triển khai giải pháp mất bao lâu?</span>
+              <span class="text-brand-600 dark:text-emerald-400 group-open:rotate-180 transition shrink-0">▼</span>
+            </summary>
+            <p class="text-sm text-muted dark:text-muted-invert mt-3 leading-relaxed">
+              Thông thường với gói Cơ bản và Chuyên nghiệp, bạn có thể thiết lập và bắt đầu theo dõi dữ liệu chỉ trong vòng 24 đến 48 giờ.
+            </p>
+          </details>
+
+          <details class="card group cursor-pointer p-6">
+            <summary class="font-bold text-ink dark:text-ink-invert list-none flex justify-between items-center gap-4 text-base">
+              <span>Tôi có thể hủy gói dịch vụ bất cứ lúc nào không?</span>
+              <span class="text-brand-600 dark:text-emerald-400 group-open:rotate-180 transition shrink-0">▼</span>
+            </summary>
+            <p class="text-sm text-muted dark:text-muted-invert mt-3 leading-relaxed">
+              Hoàn toàn có thể. Chúng tôi không cam kết hợp đồng dài hạn bắt buộc đối với các gói dịch vụ tiêu chuẩn. Bạn có thể linh hoạt chuyển đổi gói hoặc hủy bất kỳ lúc nào.
+            </p>
+          </details>
+
+          <details class="card group cursor-pointer p-6">
+            <summary class="font-bold text-ink dark:text-ink-invert list-none flex justify-between items-center gap-4 text-base">
+              <span>Dữ liệu phát thải của doanh nghiệp có được bảo mật không?</span>
+              <span class="text-brand-600 dark:text-emerald-400 group-open:rotate-180 transition shrink-0">▼</span>
+            </summary>
+            <p class="text-sm text-muted dark:text-muted-invert mt-3 leading-relaxed">
+              Tất cả dữ liệu được lưu trữ trên hạ tầng máy chủ đạt tiêu chuẩn bảo mật quốc tế ISO/IEC 27001 và được mã hóa đầu cuối nghiêm ngặt.
+            </p>
+          </details>
+        </div>
+      </section>
+
+      <!-- 10. TRIAL CTA BANNER -->
+      <section aria-labelledby="cta-title" id="cta" class="section pt-0">
+        <div class="bg-brand-600 text-white rounded-3xl p-8 sm:p-12 md:p-16 text-center shadow-xl">
+          <h2 id="cta-title" class="text-2xl sm:text-3xl md:text-4xl font-extrabold mb-4 font-display">
+            Bắt đầu hành trình chuyển đổi xanh ngay hôm nay
+          </h2>
+          <p class="text-brand-50/90 max-w-xl mx-auto text-sm sm:text-base mb-8 leading-relaxed">
+            Trải nghiệm nền tảng Bloom miễn phí trong 30 ngày. Không cần thẻ tín dụng, sẵn sàng cùng hơn 2,500+ tổ chức kiến tạo tương lai bền vững.
           </p>
           <div class="flex flex-wrap justify-center gap-4">
             <a href="pricing.html" class="btn bg-white text-brand-700 hover:bg-brand-50 px-8 py-3.5 font-bold shadow-md">
-              Bắt đầu dùng thử miễn phí
+              Dùng thử miễn phí 30 ngày
             </a>
             <a href="contact.html" class="btn border border-emerald-400 text-white hover:bg-brand-700 px-8 py-3.5 font-bold">
-              Đặt lịch Demo 1:1
+              Liên hệ chuyên gia tư vấn
             </a>
           </div>
         </div>
       </section>
     </main>
 
-    <!-- FOOTER -->
+    <!-- 11. FOOTER -->
     <footer class="border-t border-line dark:border-line-invert bg-surface-alt/70 dark:bg-surface-dark-alt/50 py-16 text-sm text-muted dark:text-muted-invert">
       <div class="mx-auto w-full max-w-6xl px-5 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
         <!-- BRAND -->
         <div>
           <a href="index.html" class="inline-flex items-center gap-2 text-2xl font-bold text-ink dark:text-ink-invert mb-4">
-            <span class="tracking-tight text-brand-700 dark:text-emerald-400 font-extrabold">Bloom</span>
+            <span class="tracking-tight text-brand-700 dark:text-emerald-400 font-extrabold font-display">Bloom</span>
           </a>
           <p class="text-xs text-muted dark:text-muted-invert leading-relaxed">
             Giải pháp công nghệ hỗ trợ doanh nghiệp tối ưu hóa tiêu thụ năng lượng và xây dựng tương lai phát triển bền vững.
@@ -707,20 +604,20 @@
             <li><a href="index.html#features" class="hover:text-brand-600 dark:hover:text-emerald-300 transition">Tính năng chính</a></li>
             <li><a href="index.html#solutions" class="hover:text-brand-600 dark:hover:text-emerald-300 transition">Giải pháp ngành</a></li>
             <li><a href="pricing.html" class="hover:text-brand-600 dark:hover:text-emerald-300 transition">Bảng giá</a></li>
-            <li><a href="index.html#blog" class="hover:text-brand-600 dark:hover:text-emerald-300 transition">Tin tức</a></li>
+            <li><a href="contact.html" class="hover:text-brand-600 dark:hover:text-emerald-300 transition">Liên hệ hỗ trợ</a></li>
           </ul>
         </nav>
 
         <!-- SUPPORT -->
         <nav aria-labelledby="footer-support-heading">
           <h3 id="footer-support-heading" class="font-bold text-ink dark:text-ink-invert mb-4 text-xs uppercase tracking-wider">
-            Hỗ trợ
+            Hỗ trợ & Tài liệu
           </h3>
           <ul class="space-y-2.5 text-xs">
-            <li><a href="index.html#faq" class="hover:text-brand-600 dark:hover:text-emerald-300 transition">Trung tâm trợ giúp</a></li>
-            <li><a href="index.html#faq" class="hover:text-brand-600 dark:hover:text-emerald-300 transition">Tài liệu API</a></li>
-            <li><a href="index.html#features" class="hover:text-brand-600 dark:hover:text-emerald-300 transition">Cộng đồng ESG</a></li>
-            <li><a href="contact.html" class="hover:text-brand-600 dark:hover:text-emerald-300 transition">Liên hệ hỗ trợ</a></li>
+            <li><a href="index.html#faq" class="hover:text-brand-600 dark:hover:text-emerald-300 transition">Câu hỏi thường gặp</a></li>
+            <li><a href="index.html#features" class="hover:text-brand-600 dark:hover:text-emerald-300 transition">Tài liệu tích hợp API</a></li>
+            <li><a href="contact.html" class="hover:text-brand-600 dark:hover:text-emerald-300 transition">Cộng đồng ESG Việt Nam</a></li>
+            <li><a href="contact.html" class="hover:text-brand-600 dark:hover:text-emerald-300 transition">Hỗ trợ kỹ thuật 24/7</a></li>
           </ul>
         </nav>
 
@@ -742,7 +639,7 @@
       </div>
     </footer>
 
-    <!-- VIDEO MODAL -->
+    <!-- VIDEO MODAL DIALOG -->
     <dialog id="videoModal" class="p-0 rounded-2xl max-w-3xl w-11/12 border border-line dark:border-line-invert shadow-2xl backdrop:bg-black/60">
       <div class="bg-surface dark:bg-surface-dark-alt p-4 rounded-2xl">
         <div class="flex justify-end mb-3">
@@ -766,4 +663,4 @@
       </div>
     </dialog>
   </body>
-</html>
+</html>
