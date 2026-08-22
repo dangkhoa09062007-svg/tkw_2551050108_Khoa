@@ -4,9 +4,10 @@
 
 @theme {
   /* =========================
-     LANDWIND / FIGMA COLORS
+     LANDWIND DESIGN TOKENS
      ========================= */
 
+  /* Brand */
   --color-brand-50: #f5f3ff;
   --color-brand-100: #ede9fe;
   --color-brand-200: #ddd6fe;
@@ -14,31 +15,36 @@
   --color-brand-600: #7c3aed;
   --color-brand-700: #6d28d9;
   --color-brand-800: #5b21b6;
-  --color-brand-900: #4c1d95;
 
-  --color-accent-500: #8b5cf6;
+  /* Dark brand pair */
+  --color-brand-dark-500: #a78bfa;
+  --color-brand-dark-600: #8b5cf6;
 
+  /* Text */
   --color-ink: #111827;
+  --color-ink-soft: #374151;
   --color-ink-invert: #f9fafb;
-
   --color-muted: #6b7280;
   --color-muted-invert: #9ca3af;
 
+  /* Border */
   --color-line: #e5e7eb;
   --color-line-invert: #374151;
 
+  /* Surface */
   --color-surface: #ffffff;
   --color-surface-alt: #f9fafb;
   --color-surface-dark: #111827;
   --color-surface-dark-alt: #1f2937;
 
+  /* Typography */
   --font-display: "Plus Jakarta Sans", system-ui, sans-serif;
   --font-body: "Inter", system-ui, sans-serif;
 
+  /* Radius */
   --radius-card: 0.625rem;
   --radius-pill: 9999px;
 }
-
 
 /* ========================================
    BASE
@@ -47,16 +53,27 @@
 @layer base {
   html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
   }
 
   body {
-    @apply bg-white text-gray-800 antialiased;
-    font-family: var(--font-body);
     margin: 0;
+    min-width: 320px;
+    width: 100%;
+    overflow-x: hidden;
+    background: var(--color-surface);
+    color: var(--color-ink);
+    font-family: var(--font-body);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    transition:
+      background-color 200ms ease,
+      color 200ms ease;
   }
 
   .dark body {
-    @apply bg-gray-900 text-gray-100;
+    background: var(--color-surface-dark);
+    color: var(--color-ink-invert);
   }
 
   h1,
@@ -65,144 +82,160 @@
   h4,
   h5,
   h6 {
+    margin-top: 0;
     font-family: var(--font-display);
     letter-spacing: -0.025em;
   }
 
   img {
+    display: block;
     max-width: 100%;
+    height: auto;
   }
 
   button,
   a {
     -webkit-tap-highlight-color: transparent;
   }
+
+  button {
+    font: inherit;
+  }
 }
 
-
 /* ========================================
-   COMMON COMPONENTS
+   REUSABLE COMPONENTS
+   These are intentionally shared by all
+   pages instead of styling every page
+   separately.
    ======================================== */
 
 @layer components {
-
   .section {
-    @apply mx-auto w-full max-w-6xl px-5 py-16 md:py-20 lg:py-24;
+    width: 100%;
+    max-width: 1120px;
+    margin-inline: auto;
+    padding-inline: 20px;
+    padding-block: 72px;
   }
 
   .eyebrow {
-    @apply inline-flex items-center gap-1.5
-      rounded-full
-      bg-violet-100
-      px-3 py-1
-      text-xs font-semibold
-      text-violet-700
-      mb-4;
+    @apply inline-flex items-center gap-1.5 rounded-full
+      bg-brand-100 px-3 py-1 text-xs font-semibold
+      text-brand-700 mb-4;
   }
 
   .btn {
     @apply inline-flex items-center justify-center gap-2
-      rounded-lg
-      px-5 py-2.5
-      text-sm font-semibold
-      transition-all duration-200
-      cursor-pointer
-      focus:outline-none
-      focus:ring-2
-      focus:ring-violet-500/40
+      rounded-lg px-5 py-2.5 text-sm font-semibold
+      transition-all duration-200 cursor-pointer
+      focus:outline-none focus:ring-2 focus:ring-brand-600/30
       focus:ring-offset-2;
   }
 
   .btn-primary {
-    @apply bg-violet-600
-      text-white
-      shadow-sm
-      hover:bg-violet-700;
+    @apply bg-brand-600 text-white shadow-sm
+      hover:bg-brand-700;
   }
 
   .btn-secondary {
-    @apply border
-      border-gray-300
-      bg-white
-      text-gray-800
-      hover:bg-gray-50;
+    @apply border border-line bg-surface text-ink
+      hover:bg-surface-alt;
   }
 
   .btn-ghost {
-    @apply text-gray-700
-      hover:text-violet-600
-      hover:bg-violet-50;
+    @apply text-ink-soft hover:bg-brand-50 hover:text-brand-600;
   }
 
   .card {
-    @apply rounded-xl
-      border
-      border-gray-200
-      bg-white
-      p-6
-      shadow-sm
-      transition-all duration-200
+    @apply rounded-card border border-line bg-surface
+      p-6 shadow-sm transition-shadow duration-200
       hover:shadow-md;
   }
 
   .badge {
-    @apply inline-flex items-center
-      rounded-full
-      bg-violet-50
-      px-2.5 py-0.5
-      text-xs font-medium
-      text-violet-700
-      border border-violet-100;
+    @apply inline-flex items-center rounded-full
+      border border-brand-100 bg-brand-50
+      px-2.5 py-0.5 text-xs font-medium text-brand-700;
   }
 
   .field-label {
-    @apply block
-      text-sm font-semibold
-      text-gray-900
-      mb-1.5
-      cursor-pointer;
+    @apply mb-1.5 block cursor-pointer text-sm
+      font-semibold text-ink;
   }
 
   .field-input {
-    @apply w-full
-      rounded-lg
-      border border-gray-200
-      bg-white
-      px-4 py-2.5
-      text-sm text-gray-900
-      placeholder:text-gray-400
-      focus:border-violet-500
-      focus:outline-none
-      focus:ring-2
-      focus:ring-violet-500/20
+    @apply w-full rounded-lg border border-line
+      bg-surface px-4 py-2.5 text-sm text-ink
+      placeholder:text-gray-400 focus:border-brand-600
+      focus:outline-none focus:ring-2 focus:ring-brand-600/20
       transition;
   }
 
   .field-hint {
-    @apply mt-1.5
-      text-xs
-      text-gray-500;
+    @apply mt-1.5 text-xs text-muted;
   }
 
   .field-error {
-    @apply mt-1.5
-      min-h-[1rem]
-      text-xs
-      font-medium
-      text-red-600;
+    @apply mt-1.5 min-h-[1rem] text-xs
+      font-medium text-red-600;
+  }
+
+  /* Dark token pairs are used by the shared components. */
+  .dark .btn-primary {
+    background: var(--color-brand-dark-600);
+  }
+
+  .dark .btn-primary:hover {
+    background: var(--color-brand-dark-500);
+  }
+
+  .dark .btn-secondary,
+  .dark .card,
+  .dark .field-input {
+    border-color: var(--color-line-invert);
+    background: var(--color-surface-dark-alt);
+    color: var(--color-ink-invert);
+  }
+
+  .dark .btn-ghost {
+    color: var(--color-ink-invert);
+  }
+
+  .dark .btn-ghost:hover {
+    background: var(--color-surface-dark-alt);
+    color: var(--color-brand-dark-500);
+  }
+
+  .dark .badge,
+  .dark .eyebrow {
+    background: #2e1065;
+    border-color: #4c1d95;
+    color: #c4b5fd;
+  }
+
+  .dark .field-label {
+    color: var(--color-ink-invert);
+  }
+
+  .dark .field-hint {
+    color: var(--color-muted-invert);
+  }
+
+  .dark .field-error {
+    color: #fca5a5;
   }
 }
 
-
 /* ========================================
-   GLOBAL LANDWIND CONTAINER
+   GLOBAL LANDWIND LAYOUT
    ======================================== */
 
 @layer components {
-
   main {
     width: 100%;
-    overflow: hidden;
+    min-width: 0;
+    overflow-x: clip;
   }
 
   main > section {
@@ -215,135 +248,161 @@
   }
 }
 
-
 /* ========================================
    HEADER
+   Figma: compact white navigation,
+   centered inside the main content width.
    ======================================== */
 
 @layer components {
-
   header {
+    position: relative;
+    z-index: 20;
     background: rgba(255, 255, 255, 0.96) !important;
     border-bottom: 1px solid #f3f4f6 !important;
     backdrop-filter: blur(12px);
   }
 
   header > div {
+    width: 100%;
     max-width: 1120px !important;
     min-height: 72px;
+    margin-inline: auto;
   }
 
   header a {
-    transition: color 0.2s ease, background 0.2s ease;
+    transition:
+      color 0.2s ease,
+      background-color 0.2s ease;
   }
 
   header nav a:hover {
-    color: #7c3aed !important;
+    color: var(--color-brand-600) !important;
   }
 
   header .text-emerald-800 {
-    color: #7c3aed !important;
+    color: var(--color-brand-600) !important;
   }
 
   header .bg-emerald-800 {
-    background: #7c3aed !important;
+    background: var(--color-brand-600) !important;
   }
 
   header .bg-emerald-800:hover {
-    background: #6d28d9 !important;
+    background: var(--color-brand-700) !important;
+  }
+
+  .dark header {
+    background: rgba(17, 24, 39, 0.96) !important;
+    border-color: var(--color-line-invert) !important;
   }
 }
 
-
 /* ========================================
    HERO
+   Figma: 2-column hero with large heading,
+   description, CTA buttons and illustration.
    ======================================== */
 
 @layer components {
-
   #hero {
+    width: 100%;
     max-width: none !important;
-    background: #ffffff !important;
+    background: var(--color-surface) !important;
     padding-top: 72px !important;
-    padding-bottom: 72px !important;
+    padding-bottom: 56px !important;
   }
 
   #hero > div {
+    width: 100%;
     max-width: 1120px;
-    margin-left: auto;
-    margin-right: auto;
+    margin-inline: auto;
   }
 
   #hero h1 {
     max-width: 560px;
+    margin-bottom: 20px;
     font-size: 48px;
     line-height: 1.08;
     letter-spacing: -0.04em;
-    color: #111827 !important;
+    color: var(--color-ink) !important;
   }
 
   #hero p {
     max-width: 560px;
-    color: #6b7280 !important;
+    color: var(--color-muted) !important;
     font-size: 15px;
     line-height: 1.65;
   }
 
   #hero .bg-emerald-100 {
-    background: #ede9fe !important;
-    color: #7c3aed !important;
+    background: var(--color-brand-100) !important;
+    color: var(--color-brand-600) !important;
   }
 
   #hero .bg-emerald-800 {
-    background: #7c3aed !important;
+    background: var(--color-brand-600) !important;
   }
 
   #hero .bg-emerald-800:hover {
-    background: #6d28d9 !important;
+    background: var(--color-brand-700) !important;
   }
 
   #hero .text-emerald-600 {
-    color: #7c3aed !important;
+    color: var(--color-brand-600) !important;
   }
 
   #hero .border-emerald-800 {
-    border-color: #7c3aed !important;
-    color: #7c3aed !important;
+    border-color: var(--color-brand-600) !important;
+    color: var(--color-brand-600) !important;
   }
 
   #hero .border-emerald-800:hover {
-    background: #f5f3ff !important;
+    background: var(--color-brand-50) !important;
   }
 
   #hero img {
+    width: 100%;
     max-height: 390px !important;
     object-fit: contain;
   }
-}
 
+  .dark #hero {
+    background: var(--color-surface-dark) !important;
+  }
+
+  .dark #hero h1 {
+    color: var(--color-ink-invert) !important;
+  }
+
+  .dark #hero p {
+    color: var(--color-muted-invert) !important;
+  }
+}
 
 /* ========================================
    LOGOS
    ======================================== */
 
 @layer components {
-
   #logos {
+    width: 100%;
     max-width: none !important;
-    background: #f9fafb !important;
+    background: var(--color-surface) !important;
     border-top: 1px solid #f3f4f6 !important;
     border-bottom: 1px solid #f3f4f6 !important;
-    padding-top: 34px !important;
-    padding-bottom: 34px !important;
+    padding-top: 28px !important;
+    padding-bottom: 28px !important;
   }
 
   #logos > div {
     max-width: 1120px !important;
+    margin-inline: auto;
   }
 
   #logos ul {
     justify-content: space-between !important;
-    color: #6b7280 !important;
+    color: var(--color-muted) !important;
   }
 
   #logos li {
@@ -351,20 +410,24 @@
   }
 
   #logos li:hover {
-    color: #374151 !important;
+    color: var(--color-ink-soft) !important;
+  }
+
+  .dark #logos {
+    background: var(--color-surface-dark) !important;
+    border-color: var(--color-line-invert) !important;
   }
 }
-
 
 /* ========================================
    FEATURES
    ======================================== */
 
 @layer components {
-
   #features {
+    width: 100%;
     max-width: none !important;
-    background: #ffffff !important;
+    background: var(--color-surface-alt) !important;
     padding-top: 72px !important;
     padding-bottom: 72px !important;
   }
@@ -375,21 +438,20 @@
 
   #features h2,
   #features-title {
-    color: #111827 !important;
+    color: var(--color-ink) !important;
     font-size: 36px;
     line-height: 1.2;
   }
 
   #features > ul {
     max-width: 1120px !important;
-    margin-left: auto;
-    margin-right: auto;
+    margin-inline: auto;
   }
 
   #features li {
-    border: 1px solid #e5e7eb !important;
+    border: 1px solid var(--color-line) !important;
     border-radius: 10px !important;
-    background: #ffffff !important;
+    background: var(--color-surface) !important;
     box-shadow: 0 1px 3px rgba(17, 24, 39, 0.05) !important;
   }
 
@@ -398,24 +460,37 @@
   }
 
   #features li .bg-emerald-50 {
-    background: #f5f3ff !important;
+    background: var(--color-brand-50) !important;
   }
 
   #features li .text-emerald-600 {
-    color: #7c3aed !important;
+    color: var(--color-brand-600) !important;
+  }
+
+  .dark #features {
+    background: var(--color-surface-dark-alt) !important;
+  }
+
+  .dark #features h2,
+  .dark #features-title {
+    color: var(--color-ink-invert) !important;
+  }
+
+  .dark #features li {
+    border-color: var(--color-line-invert) !important;
+    background: var(--color-surface-dark) !important;
   }
 }
-
 
 /* ========================================
    SOLUTIONS
    ======================================== */
 
 @layer components {
-
   #solutions {
+    width: 100%;
     max-width: none !important;
-    background: #f9fafb !important;
+    background: var(--color-surface) !important;
     border-radius: 0 !important;
     padding-top: 72px !important;
     padding-bottom: 72px !important;
@@ -423,13 +498,12 @@
 
   #solutions > div {
     max-width: 1120px !important;
-    margin-left: auto;
-    margin-right: auto;
+    margin-inline: auto;
   }
 
   #solutions h2 {
     font-size: 36px;
-    color: #111827 !important;
+    color: var(--color-ink) !important;
   }
 
   #solutions > div:last-child {
@@ -439,27 +513,39 @@
   }
 
   #solutions > div:last-child > div {
-    border: 1px solid #e5e7eb !important;
+    border: 1px solid var(--color-line) !important;
     border-radius: 10px !important;
-    background: #ffffff !important;
+    background: var(--color-surface) !important;
     box-shadow: 0 1px 3px rgba(17, 24, 39, 0.04) !important;
   }
 
   #solutions a {
-    color: #7c3aed !important;
+    color: var(--color-brand-600) !important;
+  }
+
+  .dark #solutions {
+    background: var(--color-surface-dark) !important;
+  }
+
+  .dark #solutions h2 {
+    color: var(--color-ink-invert) !important;
+  }
+
+  .dark #solutions > div:last-child > div {
+    border-color: var(--color-line-invert) !important;
+    background: var(--color-surface-dark-alt) !important;
   }
 }
-
 
 /* ========================================
    STATS
    ======================================== */
 
 @layer components {
-
   #stats {
+    width: 100%;
     max-width: none !important;
-    background: #ffffff !important;
+    background: var(--color-surface) !important;
     border-top: 1px solid #f3f4f6 !important;
     border-bottom: 1px solid #f3f4f6 !important;
     padding-top: 52px !important;
@@ -468,32 +554,37 @@
 
   #stats > div {
     max-width: 1120px !important;
+    margin-inline: auto;
   }
 
   #stats dd {
-    color: #7c3aed !important;
+    color: var(--color-brand-600) !important;
     font-size: 42px;
   }
 
   #stats dt {
-    color: #6b7280 !important;
+    color: var(--color-muted) !important;
   }
 
   #stats .divide-gray-200 > * {
-    border-color: #e5e7eb !important;
+    border-color: var(--color-line) !important;
+  }
+
+  .dark #stats {
+    background: var(--color-surface-dark) !important;
+    border-color: var(--color-line-invert) !important;
   }
 }
-
 
 /* ========================================
    TESTIMONIALS
    ======================================== */
 
 @layer components {
-
   #testimonials {
+    width: 100%;
     max-width: none !important;
-    background: #f9fafb !important;
+    background: var(--color-surface-alt) !important;
     padding-top: 72px !important;
     padding-bottom: 72px !important;
   }
@@ -504,43 +595,59 @@
 
   #testimonials h2 {
     font-size: 36px;
-    color: #111827 !important;
+    color: var(--color-ink) !important;
   }
 
   #testimonials > div:last-child {
     max-width: 900px;
-    margin-left: auto;
-    margin-right: auto;
+    margin-inline: auto;
   }
 
   #testimonials figure {
-    border: 1px solid #e5e7eb !important;
+    border: 1px solid var(--color-line) !important;
     border-radius: 10px !important;
-    background: #ffffff !important;
+    background: var(--color-surface) !important;
     box-shadow: 0 1px 3px rgba(17, 24, 39, 0.04) !important;
   }
 
   #testimonials figure blockquote {
-    color: #374151 !important;
+    color: var(--color-ink-soft) !important;
     font-style: normal;
   }
 
   #testimonials figure .bg-emerald-800,
   #testimonials figure .bg-emerald-600 {
-    background: #7c3aed !important;
+    background: var(--color-brand-600) !important;
+  }
+
+  .dark #testimonials {
+    background: var(--color-surface-dark-alt) !important;
+  }
+
+  .dark #testimonials h2 {
+    color: var(--color-ink-invert) !important;
+  }
+
+  .dark #testimonials figure {
+    border-color: var(--color-line-invert) !important;
+    background: var(--color-surface-dark) !important;
+  }
+
+  .dark #testimonials figure blockquote {
+    color: var(--color-ink-invert) !important;
   }
 }
 
-
 /* ========================================
    PRICING
+   Figma: three equal cards.
    ======================================== */
 
 @layer components {
-
   #pricing {
+    width: 100%;
     max-width: none !important;
-    background: #ffffff !important;
+    background: var(--color-surface) !important;
     padding-top: 72px !important;
     padding-bottom: 72px !important;
   }
@@ -551,63 +658,74 @@
 
   #pricing h2 {
     font-size: 36px;
-    color: #111827 !important;
+    color: var(--color-ink) !important;
   }
 
   #pricing > ul {
     max-width: 1120px !important;
-    margin-left: auto;
-    margin-right: auto;
+    margin-inline: auto;
   }
 
   #pricing > ul > li {
     min-height: 360px;
-    border: 1px solid #e5e7eb !important;
-    border-radius: 10px !important;
+    border: 1px solid var(--color-line) !important;
+    border-radius: 8px !important;
     box-shadow: 0 1px 3px rgba(17, 24, 39, 0.05) !important;
   }
 
   #pricing > ul > li:nth-child(2) {
-    border: 1px solid #7c3aed !important;
+    border-color: var(--color-brand-600) !important;
     box-shadow: 0 8px 24px rgba(124, 58, 237, 0.12) !important;
   }
 
   #pricing .bg-emerald-800 {
-    background: #7c3aed !important;
+    background: var(--color-brand-600) !important;
   }
 
   #pricing .bg-emerald-800:hover {
-    background: #6d28d9 !important;
+    background: var(--color-brand-700) !important;
   }
 
   #pricing .border-emerald-800 {
-    border-color: #7c3aed !important;
-    color: #7c3aed !important;
+    border-color: var(--color-brand-600) !important;
+    color: var(--color-brand-600) !important;
   }
 
   #pricing .border-emerald-800:hover {
-    background: #f5f3ff !important;
+    background: var(--color-brand-50) !important;
   }
 
   #pricing .text-emerald-800 {
-    color: #7c3aed !important;
+    color: var(--color-brand-600) !important;
   }
 
   #pricing .ring-emerald-600 {
-    --tw-ring-color: #7c3aed !important;
+    --tw-ring-color: var(--color-brand-600) !important;
+  }
+
+  .dark #pricing {
+    background: var(--color-surface-dark) !important;
+  }
+
+  .dark #pricing h2 {
+    color: var(--color-ink-invert) !important;
+  }
+
+  .dark #pricing > ul > li {
+    border-color: var(--color-line-invert) !important;
+    background: var(--color-surface-dark-alt) !important;
   }
 }
-
 
 /* ========================================
    FAQ
    ======================================== */
 
 @layer components {
-
   #faq {
+    width: 100%;
     max-width: none !important;
-    background: #f9fafb !important;
+    background: var(--color-surface-alt) !important;
     border-radius: 0 !important;
     padding-top: 72px !important;
     padding-bottom: 72px !important;
@@ -615,18 +733,17 @@
 
   #faq > div {
     max-width: 760px !important;
-    margin-left: auto;
-    margin-right: auto;
+    margin-inline: auto;
   }
 
   #faq h2 {
     font-size: 36px;
-    color: #111827 !important;
+    color: var(--color-ink) !important;
   }
 
   #faq details {
-    background: #ffffff !important;
-    border: 1px solid #e5e7eb !important;
+    background: var(--color-surface) !important;
+    border: 1px solid var(--color-line) !important;
     border-radius: 8px !important;
     box-shadow: 0 1px 3px rgba(17, 24, 39, 0.03) !important;
     margin-bottom: 8px;
@@ -637,19 +754,30 @@
   }
 
   #faq summary span {
-    color: #7c3aed !important;
+    color: var(--color-brand-600) !important;
+  }
+
+  .dark #faq {
+    background: var(--color-surface-dark-alt) !important;
+  }
+
+  .dark #faq h2 {
+    color: var(--color-ink-invert) !important;
+  }
+
+  .dark #faq details {
+    background: var(--color-surface-dark) !important;
+    border-color: var(--color-line-invert) !important;
   }
 }
-
 
 /* ========================================
    HOW IT WORKS
    ======================================== */
 
 @layer components {
-
   #how-it-works {
-    background: #ffffff !important;
+    background: var(--color-surface) !important;
     padding-top: 64px !important;
     padding-bottom: 64px !important;
   }
@@ -657,32 +785,39 @@
   #how-it-works > div,
   #how-it-works > ol {
     max-width: 1120px;
-    margin-left: auto;
-    margin-right: auto;
+    margin-inline: auto;
   }
 
   #how-it-works li {
-    border: 1px solid #e5e7eb !important;
+    border: 1px solid var(--color-line) !important;
     border-radius: 10px !important;
-    background: #ffffff !important;
+    background: var(--color-surface) !important;
   }
 
   #how-it-works li span {
-    background: #f5f3ff !important;
-    color: #7c3aed !important;
+    background: var(--color-brand-50) !important;
+    color: var(--color-brand-600) !important;
+  }
+
+  .dark #how-it-works,
+  .dark #how-it-works li {
+    background: var(--color-surface-dark) !important;
+  }
+
+  .dark #how-it-works li {
+    border-color: var(--color-line-invert) !important;
   }
 }
-
 
 /* ========================================
    BLOG
    ======================================== */
 
 @layer components {
-
   #blog {
+    width: 100%;
     max-width: none !important;
-    background: #ffffff !important;
+    background: var(--color-surface) !important;
     border-top: 1px solid #f3f4f6 !important;
     padding-top: 72px !important;
     padding-bottom: 72px !important;
@@ -690,50 +825,58 @@
 
   #blog > div {
     max-width: 1120px;
-    margin-left: auto;
-    margin-right: auto;
+    margin-inline: auto;
   }
 
   #blog h2 {
     font-size: 36px;
-    color: #111827 !important;
+    color: var(--color-ink) !important;
   }
 
   #blog a,
   #blog span {
-    color: #7c3aed !important;
+    color: var(--color-brand-600) !important;
   }
 
   #blog article .bg-emerald-100 {
-    background: #ede9fe !important;
+    background: var(--color-brand-100) !important;
+  }
+
+  .dark #blog {
+    background: var(--color-surface-dark) !important;
+    border-color: var(--color-line-invert) !important;
+  }
+
+  .dark #blog h2 {
+    color: var(--color-ink-invert) !important;
   }
 }
 
-
 /* ========================================
-   CTA - LANDWIND STYLE
+   CTA
+   Figma: centered free-trial block,
+   not an oversized full-width panel.
    ======================================== */
 
 @layer components {
-
   #cta {
+    width: 100%;
     max-width: none !important;
-    background: #ffffff !important;
-    padding-top: 64px !important;
-    padding-bottom: 64px !important;
+    background: var(--color-surface) !important;
+    padding-top: 56px !important;
+    padding-bottom: 56px !important;
   }
 
   #cta > div {
     max-width: 1120px !important;
-    margin-left: auto;
-    margin-right: auto;
+    margin-inline: auto;
   }
 
   #cta > div > div {
-    background: #7c3aed !important;
-    border-radius: 14px !important;
-    padding: 56px 40px !important;
-    box-shadow: 0 18px 40px rgba(109, 40, 217, 0.16) !important;
+    background: var(--color-brand-600) !important;
+    border-radius: 8px !important;
+    padding: 48px 32px !important;
+    box-shadow: 0 12px 30px rgba(124, 58, 237, 0.14) !important;
   }
 
   #cta h2 {
@@ -741,69 +884,78 @@
   }
 
   #cta p {
-    color: #ede9fe !important;
+    color: var(--color-brand-100) !important;
   }
 
   #cta a.bg-white {
-    color: #7c3aed !important;
-    border-radius: 8px !important;
+    color: var(--color-brand-600) !important;
+    border-radius: 6px !important;
   }
 
   #cta a.border-emerald-400 {
     border-color: #c4b5fd !important;
-    border-radius: 8px !important;
+    border-radius: 6px !important;
   }
 }
-
 
 /* ========================================
    FOOTER
    ======================================== */
 
 @layer components {
-
   footer {
-    background: #ffffff !important;
+    background: var(--color-surface) !important;
     border-top: 1px solid #f3f4f6 !important;
-    padding-top: 56px !important;
+    padding-top: 48px !important;
     padding-bottom: 28px !important;
   }
 
   footer > div:first-child {
     max-width: 1120px !important;
+    margin-inline: auto;
   }
 
   footer h3 {
-    color: #111827 !important;
+    color: var(--color-ink) !important;
   }
 
   footer a {
-    color: #6b7280;
+    color: var(--color-muted);
+    transition: color 0.2s ease;
   }
 
   footer a:hover {
-    color: #7c3aed !important;
+    color: var(--color-brand-600) !important;
   }
 
   footer .text-emerald-900 {
-    color: #7c3aed !important;
+    color: var(--color-brand-600) !important;
   }
 
   footer > div:last-child {
     max-width: 1120px !important;
+    margin-inline: auto;
+  }
+
+  .dark footer {
+    background: var(--color-surface-dark) !important;
+    border-color: var(--color-line-invert) !important;
+  }
+
+  .dark footer h3 {
+    color: var(--color-ink-invert) !important;
   }
 }
-
 
 /* ========================================
    VIDEO MODAL
    ======================================== */
 
 @layer components {
-
   #videoModal {
-    border-radius: 14px !important;
+    max-width: min(900px, calc(100vw - 32px));
     border: 0 !important;
+    border-radius: 14px !important;
   }
 
   #videoModal::backdrop {
@@ -812,24 +964,50 @@
   }
 
   #videoModal button:hover {
-    color: #7c3aed !important;
+    color: var(--color-brand-600) !important;
   }
 }
 
-
 /* ========================================
-   RESPONSIVE - TABLET
+   RESPONSIVE - MOBILE FIRST
+   Default styles above are the mobile base.
+   Larger screens only enhance the layout.
    ======================================== */
 
-@media (max-width: 1024px) {
+/* Small screens */
+@media (min-width: 640px) {
+  .section {
+    padding-inline: 24px;
+  }
 
   #hero h1 {
     font-size: 44px;
   }
 
+  #features,
+  #solutions,
+  #testimonials,
+  #pricing,
+  #faq,
+  #blog {
+    padding-top: 64px !important;
+    padding-bottom: 64px !important;
+  }
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+  .section {
+    padding-block: 80px;
+  }
+
   #hero {
-    padding-top: 60px !important;
-    padding-bottom: 60px !important;
+    padding-top: 64px !important;
+    padding-bottom: 64px !important;
+  }
+
+  #hero h1 {
+    font-size: 46px;
   }
 
   #solutions > div:last-child {
@@ -839,18 +1017,46 @@
   #pricing > ul {
     gap: 16px;
   }
+
+  #footer > div:first-child {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
 }
 
+/* Desktop */
+@media (min-width: 1024px) {
+  .section {
+    padding-block: 96px;
+  }
+
+  #hero {
+    padding-top: 72px !important;
+    padding-bottom: 56px !important;
+  }
+
+  #hero h1 {
+    font-size: 48px;
+  }
+
+  #cta > div > div {
+    padding: 52px 40px !important;
+  }
+}
 
 /* ========================================
-   RESPONSIVE - MOBILE
+   MOBILE SAFETY
+   Prevent fixed-width children from causing
+   horizontal scrolling at 320-480px.
    ======================================== */
 
-@media (max-width: 767px) {
+@media (max-width: 639px) {
+  .section {
+    padding-inline: 20px;
+    padding-block: 56px;
+  }
 
   header > div {
-    padding-left: 20px !important;
-    padding-right: 20px !important;
+    padding-inline: 20px !important;
   }
 
   header nav {
@@ -858,36 +1064,40 @@
   }
 
   #hero {
-    grid-template-columns: 1fr !important;
-    padding: 54px 20px 64px !important;
-    gap: 40px !important;
+    display: block !important;
+    padding: 52px 20px 56px !important;
   }
 
   #hero h1 {
-    font-size: 40px !important;
+    max-width: 100%;
+    font-size: 38px !important;
     line-height: 1.08 !important;
   }
 
   #hero p {
+    max-width: 100%;
     font-size: 15px !important;
   }
 
   #hero > div:last-child {
-    order: 2;
+    margin-top: 36px;
   }
 
   #hero img {
     max-height: 300px !important;
+    margin-inline: auto;
   }
 
   #logos {
-    padding: 36px 20px !important;
+    padding: 32px 20px !important;
   }
 
   #logos ul {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     justify-content: center !important;
-    gap: 24px !important;
-    font-size: 17px !important;
+    gap: 20px !important;
+    text-align: center;
   }
 
   #features,
@@ -896,12 +1106,12 @@
   #pricing,
   #blog,
   #how-it-works {
-    padding: 64px 20px !important;
+    padding: 56px 20px !important;
   }
 
   #solutions,
   #faq {
-    padding: 64px 20px !important;
+    padding: 56px 20px !important;
   }
 
   #features h2,
@@ -926,7 +1136,7 @@
   #stats dl > div {
     border-left: 0 !important;
     border-right: 0 !important;
-    border-bottom: 1px solid #e5e7eb;
+    border-bottom: 1px solid var(--color-line);
   }
 
   #stats dl > div:last-child {
@@ -959,15 +1169,10 @@
   }
 }
 
-
-/* ========================================
-   SMALL MOBILE
-   ======================================== */
-
+/* Extra-small phones */
 @media (max-width: 480px) {
-
   #hero h1 {
-    font-size: 36px !important;
+    font-size: 34px !important;
   }
 
   #hero .flex-wrap {
@@ -981,10 +1186,8 @@
     text-align: center;
   }
 
-  #logos ul {
-    display: grid !important;
-    grid-template-columns: repeat(2, 1fr);
-    text-align: center;
+  #cta > div > div {
+    padding-inline: 20px !important;
   }
 
   footer > div:first-child {
