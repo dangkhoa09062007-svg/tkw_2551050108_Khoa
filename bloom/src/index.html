@@ -25,17 +25,16 @@
       <div class="mx-auto w-full max-w-6xl px-5 py-4 flex items-center justify-between">
         <!-- Brand Logo -->
         <a href="index.html" class="inline-flex items-center gap-2 text-2xl font-bold text-ink dark:text-ink-invert">
-          <svg class="w-8 h-8 shrink-0" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <defs>
-              <linearGradient id="bloomLeaf" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" stop-color="#10B981" />
-                <stop offset="100%" stop-color="#0F5132" />
-              </linearGradient>
-            </defs>
-            <path d="M27 4C27 4 14 5.5 7.5 14C3 20 4.5 25 7 27C9.5 29 14.5 28 19 23.5C25 17.5 27 4 27 4Z" fill="url(#bloomLeaf)"/>
-            <path d="M7 27C12.5 21 18.5 14 27 4" stroke="white" stroke-width="2" stroke-linecap="round" opacity="0.9"/>
-          </svg>
-          <span class="tracking-tight text-brand-700 dark:text-emerald-400 font-extrabold font-display">Bloom</span>
+            
+        <img
+          src="../assets/img/logo.png"
+          alt="Bloom logo"
+          class="h-12 w-auto object-contain"
+        />
+
+          <span class="tracking-tight text-brand-700 dark:text-emerald-400 font-extrabold font-display">
+            Bloom
+          </span>
         </a>
 
         <!-- Desktop Navigation Links (Landwind Menu) -->
@@ -137,15 +136,26 @@
             <a href="pricing.html" class="btn btn-primary px-6 py-3.5 text-base shadow-sm">
               Bắt đầu dùng thử 30 ngày
             </a>
-            <button 
-              type="button" 
-              onclick="document.getElementById('videoModal').showModal()"
-              class="btn btn-secondary px-6 py-3.5 text-base">
-              <svg class="w-5 h-5 text-brand-600 dark:text-emerald-400" fill="currentColor" viewBox="0 0 20 20">
-                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd"/>
-              </svg>
-              Xem video giới thiệu
-            </button>
+            <a
+  href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+  target="_blank"
+  rel="noopener noreferrer"
+  class="btn btn-secondary px-6 py-3.5 text-base"
+>
+  <svg
+    class="w-5 h-5 text-brand-600 dark:text-emerald-400"
+    fill="currentColor"
+    viewBox="0 0 20 20"
+  >
+    <path
+      fill-rule="evenodd"
+      d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z"
+      clip-rule="evenodd"
+    />
+  </svg>
+
+  Xem video giới thiệu
+</a>
           </div>
           <p class="text-xs text-muted dark:text-muted-invert flex items-center gap-2">
             <span>✓ Miễn phí 30 ngày dùng thử</span>
