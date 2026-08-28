@@ -21,100 +21,80 @@
     </a>
 
     <!-- HEADER -->
-    <header class="bg-surface/90 dark:bg-surface-dark/90 border-b border-line dark:border-line-invert sticky top-0 z-40 backdrop-blur-md transition-colors">
-      <div class="mx-auto w-full max-w-6xl px-5 py-4 flex items-center justify-between">
-        <a href="index.html" class="inline-flex items-center gap-2 text-2xl font-bold text-ink dark:text-ink-invert">
-            
-        <img
-          src="../assets/img/logo.png"
-          alt="Bloom logo"
-          class="h-12 w-auto object-contain"
-        />
+    <!-- 1. HEADER / NAVBAR -->
+<header class="bg-surface/90 dark:bg-surface-dark/90 border-b border-line dark:border-line-invert sticky top-0 z-40 backdrop-blur-md transition-colors">
+  <div class="mx-auto w-full max-w-6xl px-5 py-4 flex items-center justify-between">
+    <!-- Brand Logo -->
+    <a href="index.html" class="inline-flex items-center gap-2 text-2xl font-bold text-ink dark:text-ink-invert">
+      <img
+        src="../assets/img/logo.png"
+        alt="Bloom logo"
+        class="h-12 w-auto object-contain"
+      />
+      <span class="tracking-tight text-brand-700 dark:text-emerald-400 font-extrabold font-display">
+        Bloom
+      </span>
+    </a>
 
-          <span class="tracking-tight text-brand-700 dark:text-emerald-400 font-extrabold font-display">
-            Bloom
-          </span>
-        </a>
+    <!-- Desktop Navigation -->
+    <nav aria-label="Điều hướng chính" class="hidden lg:flex items-center gap-6 text-sm font-medium">
+      <a href="index.html" class="text-muted hover:text-brand-600 dark:text-muted-invert dark:hover:text-emerald-300 transition">Trang chủ</a>
+      <a href="index.html#features" class="text-muted hover:text-brand-600 dark:text-muted-invert dark:hover:text-emerald-300 transition">Tính năng</a>
+      <a href="index.html#solutions" class="text-muted hover:text-brand-600 dark:text-muted-invert dark:hover:text-emerald-300 transition">Giải pháp</a>
+      <a href="pricing.html" class="text-muted hover:text-brand-600 dark:text-muted-invert dark:hover:text-emerald-300 transition">Bảng giá</a>
+      <!-- Active Link Desktop cho trang Contact -->
+      <a href="contact.html" class="text-brand-600 dark:text-emerald-400 font-semibold">Liên hệ</a>
+      <a href="index.html#faq" class="text-muted hover:text-brand-600 dark:text-muted-invert dark:hover:text-emerald-300 transition">FAQ</a>
+    </nav>
 
-        <!-- Desktop Navigation -->
-        <nav aria-label="Điều hướng chính" class="hidden lg:flex items-center gap-6 text-sm font-medium">
-          <a href="index.html" class="text-muted hover:text-brand-600 dark:text-muted-invert dark:hover:text-emerald-300 transition">Trang chủ</a>
-          <a href="index.html#features" class="text-muted hover:text-brand-600 dark:text-muted-invert dark:hover:text-emerald-300 transition">Tính năng</a>
-          <a href="index.html#solutions" class="text-muted hover:text-brand-600 dark:text-muted-invert dark:hover:text-emerald-300 transition">Giải pháp</a>
-          <a href="pricing.html" class="text-muted hover:text-brand-600 dark:text-muted-invert dark:hover:text-emerald-300 transition">Bảng giá</a>
-          <a href="contact.html" class="text-brand-600 dark:text-emerald-400 font-semibold">Liên hệ</a>
-          <a href="index.html#faq" class="text-muted hover:text-brand-600 dark:text-muted-invert dark:hover:text-emerald-300 transition">FAQ</a>
-        </nav>
+    <!-- Right Controls -->
+    <div class="flex items-center gap-2 sm:gap-3 text-sm">
+      <!-- Dark Mode Toggle Button (Chuẩn JS Module) -->
+      <button
+        id="themeToggleBtn"
+        type="button"
+        title="Chuyển chế độ sáng/tối"
+        aria-label="Chuyển chế độ sáng tối"
+        class="p-2 rounded-xl border border-line dark:border-line-invert text-muted dark:text-muted-invert hover:bg-surface-alt dark:hover:bg-surface-dark-alt transition cursor-pointer"
+      >
+        <!-- Sun icon -->
+        <svg class="w-4 h-4 hidden dark:block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+        </svg>
+        <!-- Moon icon -->
+        <svg class="w-4 h-4 block dark:hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+        </svg>
+      </button>
 
-        <div class="flex items-center gap-2 sm:gap-3 text-sm">
-          
-          <!-- Dark Mode Toggle Button -->
-<button
-  type="button"
-  onclick="
-    const isDark = document.documentElement.classList.toggle('dark');
-    localStorage.setItem('bloom-dark-mode', isDark ? 'dark' : 'light');
-  "
-  title="Chuyển chế độ sáng/tối"
-  aria-label="Chuyển chế độ sáng tối"
-  class="p-2 rounded-xl border border-line dark:border-line-invert text-muted dark:text-muted-invert hover:bg-surface-alt dark:hover:bg-surface-dark-alt transition cursor-pointer"
->
-  <!-- Sun icon -->
-  <svg
-    class="w-4 h-4 hidden dark:block"
-    fill="none"
-    viewBox="0 0 24 24"
-    stroke="currentColor"
-  >
-    <path
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      stroke-width="2"
-      d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
-    />
-  </svg>
+      <a href="pricing.html" class="btn btn-primary text-xs sm:text-sm px-4 py-2">Bắt đầu ngay</a>
 
-  <!-- Moon icon -->
-  <svg
-    class="w-4 h-4 block dark:hidden"
-    fill="none"
-    viewBox="0 0 24 24"
-    stroke="currentColor"
-  >
-    <path
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      stroke-width="2"
-      d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
-    />
-  </svg>
-</button>
+      <!-- Mobile Hamburger Button -->
+      <button 
+        id="mobileMenuBtn"
+        type="button" 
+        aria-expanded="false" 
+        aria-controls="mobileMenu"
+        aria-label="Mở menu di động" 
+        class="lg:hidden p-2 rounded-xl border border-line dark:border-line-invert text-ink dark:text-ink-invert hover:bg-surface-alt dark:hover:bg-surface-dark-alt transition cursor-pointer">
+        <svg class="w-5 h-5 pointer-events-none" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+  </div>
 
-          <a href="pricing.html" class="btn btn-primary text-xs sm:text-sm px-4 py-2">Bắt đầu ngay</a>
-
-          <!-- Mobile Hamburger Button -->
-          <button 
-            type="button" 
-            onclick="document.getElementById('mobileMenu').classList.toggle('hidden')" 
-            aria-label="Mở menu di động" 
-            class="lg:hidden p-2 rounded-xl border border-line dark:border-line-invert text-ink dark:text-ink-invert hover:bg-surface-alt dark:hover:bg-surface-dark-alt transition cursor-pointer">
-            <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
-          </button>
-        </div>
-      </div>
-
-      <!-- Mobile Menu Dropdown -->
-      <div id="mobileMenu" class="hidden lg:hidden border-t border-line dark:border-line-invert bg-surface dark:bg-surface-dark px-5 py-4 space-y-3 text-sm">
-        <a href="index.html" class="block text-muted dark:text-muted-invert hover:text-brand-600 dark:hover:text-emerald-300 py-1">Trang chủ</a>
-        <a href="index.html#features" class="block text-muted dark:text-muted-invert hover:text-brand-600 dark:hover:text-emerald-300 py-1">Tính năng</a>
-        <a href="index.html#solutions" class="block text-muted dark:text-muted-invert hover:text-brand-600 dark:hover:text-emerald-300 py-1">Giải pháp</a>
-        <a href="pricing.html" class="block text-muted dark:text-muted-invert hover:text-brand-600 dark:hover:text-emerald-300 py-1">Bảng giá</a>
-        <a href="contact.html" class="block text-brand-600 dark:text-emerald-400 font-semibold py-1">Liên hệ</a>
-        <a href="index.html#faq" class="block text-muted dark:text-muted-invert hover:text-brand-600 dark:hover:text-emerald-300 py-1">FAQ</a>
-      </div>
-    </header>
+  <!-- Mobile Menu Dropdown (Đặt đúng vị trí dưới Container chính) -->
+  <div id="mobileMenu" class="hidden lg:hidden border-t border-line dark:border-line-invert bg-surface dark:bg-surface-dark px-5 py-4 space-y-3 text-sm">
+    <a href="index.html" class="block text-muted dark:text-muted-invert hover:text-brand-600 dark:hover:text-emerald-300 py-1">Trang chủ</a>
+    <a href="index.html#features" class="block text-muted dark:text-muted-invert hover:text-brand-600 dark:hover:text-emerald-300 py-1">Tính năng</a>
+    <a href="index.html#solutions" class="block text-muted dark:text-muted-invert hover:text-brand-600 dark:hover:text-emerald-300 py-1">Giải pháp</a>
+    <a href="pricing.html" class="block text-muted dark:text-muted-invert hover:text-brand-600 dark:hover:text-emerald-300 py-1">Bảng giá</a>
+    <!-- Active Link Mobile cho trang Contact -->
+    <a href="contact.html" class="block text-brand-600 dark:text-emerald-400 font-semibold py-1">Liên hệ</a>
+    <a href="index.html#faq" class="block text-muted dark:text-muted-invert hover:text-brand-600 dark:hover:text-emerald-300 py-1">FAQ</a>
+  </div>
+</header>
 
     <main id="main">
       <!-- HERO CONTACT -->
@@ -476,5 +456,6 @@
         <p>© 2026 Bloom Sustainable Solutions. Tất cả quyền được bảo lưu.</p>
       </div>
     </footer>
+    <script type="module" src="./js/main.js"></script>
   </body>
 </html>
